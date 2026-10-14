@@ -1,0 +1,16 @@
+project,component,name,version,ecosystem,is_direct,depth,fan_in,fan_out,pagerank,ancestors,descendants,is_vulnerable
+green_nest,pkg:pypi/asgiref@3.12.1,asgiref,3.12.1,PyPI,0,2,2,0,0.12276271922639875,,,0
+green_nest,pkg:pypi/certifi@2026.7.22,certifi,2026.7.22,PyPI,0,2,1,0,0.06223128369905508,,,0
+green_nest,pkg:pypi/charset-normalizer@3.5.2,charset-normalizer,3.5.2,PyPI,0,2,1,0,0.06223128369905508,,,0
+green_nest,pkg:pypi/django@5.2.18,django,5.2.18,PyPI,0,2,2,2,0.11676341023956852,,,0
+green_nest,pkg:pypi/django-allauth@65.19.7,django-allauth,65.19.7,PyPI,1,1,0,2,0.05132485839095239,,,0
+green_nest,pkg:pypi/django-filter@26.2,django-filter,26.2,PyPI,1,1,0,1,0.05132485839095239,,,0
+green_nest,pkg:pypi/gunicorn@26.2.0,gunicorn,26.2.0,PyPI,1,1,0,0,0.05132485839095239,,,0
+green_nest,pkg:pypi/idna@3.20,idna,3.20,PyPI,0,2,1,0,0.06223128369905508,,,0
+green_nest,pkg:pypi/pillow@12.3.0,pillow,12.3.0,PyPI,1,1,0,0,0.05132485839095239,,,0
+green_nest,pkg:pypi/psycopg2-binary@2.9.13,psycopg2-binary,2.9.13,PyPI,1,1,0,0,0.05132485839095239,,,0
+green_nest,pkg:pypi/python-decouple@3.8,python-decouple,3.8,PyPI,1,1,0,0,0.05132485839095239,,,0
+green_nest,pkg:pypi/requests@2.34.2,requests,2.34.2,PyPI,1,1,0,4,0.05132485839095239,,,0
+green_nest,pkg:pypi/sqlparse@0.6.0,sqlparse,0.6.0,PyPI,0,3,1,0,0.10094986861019337,,,0
+green_nest,pkg:pypi/urllib3@2.8.0,urllib3,2.8.0,PyPI,0,2,1,0,0.06223128369905508,,,0
+green_nest,pkg:pypi/whitenoise@6.12.0,whitenoise,6.12.0,PyPI,1,1,0,0,0.05132485839095239,,,0

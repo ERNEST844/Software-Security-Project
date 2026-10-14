@@ -1,0 +1,77 @@
+{
+ "all_passed": true,
+ "checks": [
+  {
+   "check": "C1 every population row was public (published <= T) at its snapshot",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C2 no label window extends past the data cut-off",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C3 one row per CVE per cohort (no duplicates)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C4 KEV candidates were NOT already in KEV at T",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C5 PoC candidates had no public PoC at T",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C6 KEV positives were added strictly after T and inside the window",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C7 PoC positives first appeared strictly after T and inside the window",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C8 temporal split: all dev-cohort label windows end on/before the test snapshot",
+   "passed": true,
+   "detail": "max dev window_end = 2025-10-08 ; test T = 2025-10-08"
+  },
+  {
+   "check": "C9 the declared feature list contains no label-derived or future-dated column",
+   "passed": true,
+   "detail": "FEATURES saved to config/features.json"
+  },
+  {
+   "check": "C10 poc_count_at_T independently recomputed from raw PoC files (200 random rows)",
+   "passed": true,
+   "detail": "0 mismatches"
+  },
+  {
+   "check": "C11 (informational) package-version-CVE triples shared by >1 project -> split by PROJECT not by row",
+   "passed": true,
+   "detail": "45 of 307 triples appear in more than one project"
+  },
+  {
+   "check": "C12 project findings use only advisories published <= T0",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "C13 package-health features use only releases <= T0 (days_since_last_release >= 0)",
+   "passed": true,
+   "detail": ""
+  }
+ ],
+ "residual_risks_not_testable": [
+  "Advisory metadata (CVSS vector, CWE, severity) is the 2026-10-13 version, not the version visible at T; later revisions could leak weakly.",
+  "Reference-list features (FIX/REPORT/EVIDENCE counts) are excluded because references accrue over time and may include exploit links added after T.",
+  "PoC repository creation dates are reliable, but PoC star counts are current values and are therefore NOT used as features.",
+  "KEV and PoC labels are proxies for exploitation: KEV under-reports library flaws (only 135 of 1,739 KEV entries map to package advisories); PoC repos include fake/scanner repos.",
+  "Right-censoring: later cohorts have had less time for exploitation to be observed; the 2025-10-08 window is the only one that is a full 12 months by the cut-off."
+ ]
+}

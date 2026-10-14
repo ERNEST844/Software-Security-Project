@@ -1,0 +1,23 @@
+# Project 6 - study configuration (frozen before data analysis)
+study:
+  title: "Intelligent software supply-chain security: prioritising vulnerable third-party dependencies"
+  course: "UTAMU S26.CSC 7203 Security of Software"
+snapshots:
+  # Time-aware cohorts: features are computed as-of T; labels look 12 months ahead.
+  cohort_dates: ["2022-10-08", "2023-10-08", "2024-10-08", "2025-10-08"]
+  horizon_months: 12
+  data_cutoff: "2026-10-08"        # KEV catalogue release date used as the end of all label windows
+  test_cohort: "2025-10-08"        # held-out evaluation cohort (never used for tuning)
+  project_snapshot_date: "2025-10-08"  # repositories are checked out as-of this date
+labels:
+  primary:   {name: kev_12m, source: "CISA KEV (dateAdded)", rule: "CVE first added to KEV in (T, T+12m]; candidates exclude CVEs already in KEV at T"}
+  secondary: {name: poc_12m, source: "nomi-sec/PoC-in-GitHub (earliest repo created_at)", rule: "First public GitHub PoC created in (T, T+12m]; candidates exclude CVEs with a PoC at or before T"}
+ecosystems_population: [npm, PyPI, Maven, Packagist, Go, NuGet, RubyGems, crates.io]
+ecosystems_projects: [npm, PyPI]
+repo_selection_criteria:   # amended once (2026-10-13) after discovery showed few repos commit package-lock.json; no vulnerability outcome data had been inspected
+  - "Public repository; only dependency lockfiles/manifests are analysed (no source code is redistributed)"
+  - "At least one commit in the 12 months before the snapshot date"
+  - "A ROOT-level lockfile of a supported type exists at the snapshot commit: npm = package-lock.json | yarn.lock | pnpm-lock.yaml ; PyPI = uv.lock | poetry.lock"
+  - "Application-type repository (libraries rarely commit lockfiles)"
+  - "Candidate list fixed in advance (config/candidates.txt); the first N=8 per primary ecosystem that satisfy the criteria, in list order, are used; ALL root-level supported lockfiles of a selected repo are scanned"
+selection_n_per_ecosystem: 8

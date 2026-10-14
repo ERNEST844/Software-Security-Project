@@ -1,0 +1,52 @@
+{
+ "pairs_sampled": 1279,
+ "pairs_failed": 0,
+ "flagged_pairs_sampled": 579,
+ "random_unflagged_sampled": 700,
+ "true_positive_pairs_ghsa": 2077,
+ "only_in_ours": 11,
+ "only_in_npm": 0,
+ "precision_vs_npm": 0.9947,
+ "recall_vs_npm": 1.0,
+ "fn_examples": [],
+ "fp_examples": [
+  [
+   [
+    "webpack-dev-middleware",
+    "7.4.5"
+   ],
+   [
+    "GHSA-g84c-rxfj-3j2c"
+   ]
+  ],
+  [
+   [
+    "multer",
+    "1.4.4-lts.1"
+   ],
+   [
+    "GHSA-44fp-w29j-9vj5",
+    "GHSA-535w-7cp7-47q4",
+    "GHSA-5528-5vmv-3xc2"
+   ]
+  ],
+  [
+   [
+    "devalue",
+    "5.3.2"
+   ],
+   [
+    "GHSA-r9w8-h9r3-54w4"
+   ]
+  ],
+  [
+   [
+    "devalue",
+    "5.1.1"
+   ],
+   [
+    "GHSA-r9w8-h9r3-54w4"
+   ]
+  ]
+ ]
+}

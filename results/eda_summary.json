@@ -1,0 +1,19 @@
+{
+ "population_rows": 67431,
+ "cvss_missing_pct": 8.23,
+ "cvss_v4_only_pct": 2.2,
+ "components_total": 23827,
+ "components_vulnerable": 267,
+ "findings": 374,
+ "findings_without_cve": 17,
+ "findings_depth_gt1_pct": 91.7,
+ "findings_transitive_pct": 93.9,
+ "health_missing_pct": 0.0,
+ "median_installed_version_age_days": 737.5,
+ "median_version_lag_days": 629.5,
+ "median_advisory_age_days_at_T0": 211.0,
+ "findings_by_ecosystem": {
+  "npm": 286,
+  "PyPI": 88
+ }
+}

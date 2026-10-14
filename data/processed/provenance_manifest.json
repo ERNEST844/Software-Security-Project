@@ -1,0 +1,352 @@
+{
+ "retrieved_utc": "2026-10-14T06:27:48.102821+00:00",
+ "sources": {
+  "CISA_KEV": {
+   "url": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json (GitHub mirror of the CISA catalogue)",
+   "catalogVersion": "2026.10.08",
+   "dateReleased": "2026-10-08T20:09:18.9833Z",
+   "count": 1739,
+   "sha256": "fb1621beec7db19d99c1f919dede3d4cc01ad88acd16f79f1592929c4826dfee"
+  },
+  "GitHub_Advisory_Database": {
+   "url": "https://github.com/github/advisory-database (advisories/github-reviewed)",
+   "commit_and_date": "36d4c87ce64759f762f4e3e0d65137da687b8272 2026-10-13T03:35:50+00:00",
+   "note": "OSV-format; pinned by commit hash"
+  },
+  "PoC_in_GitHub": {
+   "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+   "commit_and_date": "7bf2d8795e2ddf4e1669efe296f9eeabe6091ca8 2026-10-13T10:44:16+09:00",
+   "note": "CVE -> GitHub PoC repositories with creation dates; noisy proxy"
+  },
+  "npm_registry": {
+   "url": "https://registry.npmjs.org/<pkg>",
+   "use": "release dates (immutable) for package-health features; fetched 2026-10-13"
+  },
+  "PyPI": {
+   "url": "https://pypi.org/pypi/<pkg>/json",
+   "use": "release dates (immutable) for package-health features; fetched 2026-10-13"
+  },
+  "EPSS": {
+   "status": "NOT RETRIEVED in the build environment (host unreachable). Run src/fetch_epss.py locally, then re-run 05b/06/07."
+  },
+  "NVD": {
+   "status": "not used; CVSS taken from GitHub advisory vectors and recomputed with the 'cvss' library"
+  }
+ },
+ "repositories": [
+  {
+   "repo": "mastodon/mastodon",
+   "commit": "5bc7c4b7e880ee1456dc21987d8fba32e340d31e",
+   "commit_date": "2025-10-08T17:17:03+00:00",
+   "file": "yarn.lock",
+   "bytes": 538281,
+   "sha256": "bbb6e40a2f377baf3e4ed31fe6664019cd56658918c04788453bc2a01b77e945"
+  },
+  {
+   "repo": "mastodon/mastodon",
+   "commit": "5bc7c4b7e880ee1456dc21987d8fba32e340d31e",
+   "commit_date": "2025-10-08T17:17:03+00:00",
+   "file": "package.json",
+   "bytes": 7357,
+   "sha256": "854a72798ba97fd8ef256918c3f2e216e07fbea8f16f45680ec11d451d40f198"
+  },
+  {
+   "repo": "n8n-io/n8n",
+   "commit": "65b1df921063ab3781152fea067062b9b0e0e402",
+   "commit_date": "2025-10-08T18:21:44+01:00",
+   "file": "pnpm-lock.yaml",
+   "bytes": 1147937,
+   "sha256": "dbafe6198170856dd9739a589f60654a3147edaa1659a7c839b5898aaea65990"
+  },
+  {
+   "repo": "n8n-io/n8n",
+   "commit": "65b1df921063ab3781152fea067062b9b0e0e402",
+   "commit_date": "2025-10-08T18:21:44+01:00",
+   "file": "package.json",
+   "bytes": 5506,
+   "sha256": "8e60be95bb788102f712d436da36817b910dd7269382b553123a01c777591bb0"
+  },
+  {
+   "repo": "TryGhost/Ghost",
+   "commit": "f709a1a00b27faee22e1a2681afb12da812a6be0",
+   "commit_date": "2025-10-08T22:27:54+00:00",
+   "file": "yarn.lock",
+   "bytes": 1581078,
+   "sha256": "d7421fbea431fbf412f00a3e49d15fe87dbb2ab095b190a107eb16338fecaacc"
+  },
+  {
+   "repo": "TryGhost/Ghost",
+   "commit": "f709a1a00b27faee22e1a2681afb12da812a6be0",
+   "commit_date": "2025-10-08T22:27:54+00:00",
+   "file": "package.json",
+   "bytes": 5722,
+   "sha256": "32242ce67167ecd213584f847a3f4fd8fbdadcd893d29f580935b29e5db7ac3f"
+  },
+  {
+   "repo": "strapi/strapi",
+   "commit": "d6c661f8ab4a198d3e4c6a387b9b8f267a100766",
+   "commit_date": "2025-10-08T16:25:24+02:00",
+   "file": "yarn.lock",
+   "bytes": 1193773,
+   "sha256": "d9d89050e1ed59d8c311212949670dd2ac9cec92e26ab021b71552f609e9d532"
+  },
+  {
+   "repo": "strapi/strapi",
+   "commit": "d6c661f8ab4a198d3e4c6a387b9b8f267a100766",
+   "commit_date": "2025-10-08T16:25:24+02:00",
+   "file": "package.json",
+   "bytes": 7087,
+   "sha256": "7b24c5e81763cea7e9cabbabf8ad84b10bc19e7ff1ab0e2b02e2dda4a0b8bbe7"
+  },
+  {
+   "repo": "ether/etherpad-lite",
+   "commit": "04c6c26690c7dcc88d281d5012448a91e0844556",
+   "commit_date": "2025-10-08T22:57:53+02:00",
+   "file": "pnpm-lock.yaml",
+   "bytes": 321977,
+   "sha256": "fed395131910ea9c336e623b28db0545bfe03c46256906c29883d8aa6d4e0c4b"
+  },
+  {
+   "repo": "ether/etherpad-lite",
+   "commit": "04c6c26690c7dcc88d281d5012448a91e0844556",
+   "commit_date": "2025-10-08T22:57:53+02:00",
+   "file": "package.json",
+   "bytes": 1996,
+   "sha256": "e71324bd73e011e8664baea67be3280367ccdcdb93f4e9961acb781aea66b215"
+  },
+  {
+   "repo": "outline/outline",
+   "commit": "7a148b035315050864d14f399156474765e61fa2",
+   "commit_date": "2025-10-08T01:59:40+00:00",
+   "file": "yarn.lock",
+   "bytes": 758183,
+   "sha256": "e1cf7e9c957ce8a77cad1fcfc10d2e8f4ca1e40de7b2cc62724761c1208e07e5"
+  },
+  {
+   "repo": "outline/outline",
+   "commit": "7a148b035315050864d14f399156474765e61fa2",
+   "commit_date": "2025-10-08T01:59:40+00:00",
+   "file": "package.json",
+   "bytes": 14202,
+   "sha256": "2aad6e99ea2692ca75f8fb17b770e716f0cc421bcd1cff866e03082ee6c645eb"
+  },
+  {
+   "repo": "calcom/cal.com",
+   "commit": "4dfab874e02f945a45768f71f7aea674ef1b4162",
+   "commit_date": "2025-10-08T14:38:54+00:00",
+   "file": "yarn.lock",
+   "bytes": 1683540,
+   "sha256": "6e3747ba656b0362935abbd8604705dda1714715867196a76e4e7bbcbbda06c9"
+  },
+  {
+   "repo": "calcom/cal.com",
+   "commit": "4dfab874e02f945a45768f71f7aea674ef1b4162",
+   "commit_date": "2025-10-08T14:38:54+00:00",
+   "file": "package.json",
+   "bytes": 7456,
+   "sha256": "3cd4c20eb171adc3526e00d9d0b09934a7b0d6b49329c0ef0c0ef0430b1b0329"
+  },
+  {
+   "repo": "nocodb/nocodb",
+   "commit": "7e19067b84a6e63df28783bd524385d21072916e",
+   "commit_date": "2025-10-08T22:22:38+05:30",
+   "file": "pnpm-lock.yaml",
+   "bytes": 1061532,
+   "sha256": "0d394c0b0a8f39d8c1d6edc7bb26be9231358a2c8fbfaf8e50d08e424918b185"
+  },
+  {
+   "repo": "nocodb/nocodb",
+   "commit": "7e19067b84a6e63df28783bd524385d21072916e",
+   "commit_date": "2025-10-08T22:22:38+05:30",
+   "file": "package.json",
+   "bytes": 3641,
+   "sha256": "048f2f289302b20cb9ce7662f4e62480be38cfb03387fd8dbf6f7282ecf45f01"
+  },
+  {
+   "repo": "langflow-ai/langflow",
+   "commit": "312225bce9eb2ea2114d24350d26aeae352d7ba9",
+   "commit_date": "2025-10-08T22:27:14+00:00",
+   "file": "package-lock.json",
+   "bytes": 863,
+   "sha256": "ede4af6e39fc9eb6cbe583962b5fba2b63f102ae5962d40aaca72418f68d502a"
+  },
+  {
+   "repo": "langflow-ai/langflow",
+   "commit": "312225bce9eb2ea2114d24350d26aeae352d7ba9",
+   "commit_date": "2025-10-08T22:27:14+00:00",
+   "file": "uv.lock",
+   "bytes": 1856470,
+   "sha256": "1aad59e39c1074400b73a2e73ded28d45fea3460fbfa887bccc161697b9ccb4e"
+  },
+  {
+   "repo": "langflow-ai/langflow",
+   "commit": "312225bce9eb2ea2114d24350d26aeae352d7ba9",
+   "commit_date": "2025-10-08T22:27:14+00:00",
+   "file": "package.json",
+   "bytes": 60,
+   "sha256": "724e7326231ca790bcac54b83e6fb04e59be8c5b5f2e3d66e3ce2a4f540ebb55"
+  },
+  {
+   "repo": "langflow-ai/langflow",
+   "commit": "312225bce9eb2ea2114d24350d26aeae352d7ba9",
+   "commit_date": "2025-10-08T22:27:14+00:00",
+   "file": "pyproject.toml",
+   "bytes": 12523,
+   "sha256": "c0f0dfe9af30545a5de3f26025882ec915037890866163e15b682b1042f154bc"
+  },
+  {
+   "repo": "open-webui/open-webui",
+   "commit": "5043e7fc8c826af077d1dcff3711cd568349eb22",
+   "commit_date": "2025-10-08T16:54:06-05:00",
+   "file": "package-lock.json",
+   "bytes": 504270,
+   "sha256": "92dbf87cc578ffd73e5267e9e63106268599e3f705e87f0949ac939130031fd5"
+  },
+  {
+   "repo": "open-webui/open-webui",
+   "commit": "5043e7fc8c826af077d1dcff3711cd568349eb22",
+   "commit_date": "2025-10-08T16:54:06-05:00",
+   "file": "uv.lock",
+   "bytes": 639934,
+   "sha256": "890f3a28abe8729b0a6067c5952bc9293933c32ce69d34db359623ad5dbf7c24"
+  },
+  {
+   "repo": "open-webui/open-webui",
+   "commit": "5043e7fc8c826af077d1dcff3711cd568349eb22",
+   "commit_date": "2025-10-08T16:54:06-05:00",
+   "file": "package.json",
+   "bytes": 5018,
+   "sha256": "11aa0a03d4ddaccb0b39772c9efe3efb864f61b5637b277b3251125183ea9a18"
+  },
+  {
+   "repo": "open-webui/open-webui",
+   "commit": "5043e7fc8c826af077d1dcff3711cd568349eb22",
+   "commit_date": "2025-10-08T16:54:06-05:00",
+   "file": "pyproject.toml",
+   "bytes": 4428,
+   "sha256": "f4d0961ce077c9716a812564a586a87f805f989c3d63a1142dc56e739d54623d"
+  },
+  {
+   "repo": "paperless-ngx/paperless-ngx",
+   "commit": "495159f0b25e9f8cc518b4469b34e6a82972aaab",
+   "commit_date": "2025-10-07T11:14:51-07:00",
+   "file": "uv.lock",
+   "bytes": 745306,
+   "sha256": "45c0f69a050a99bd669fad74eafbc54a5fc6cc4a0855699b6ac8b1d09b9162b4"
+  },
+  {
+   "repo": "paperless-ngx/paperless-ngx",
+   "commit": "495159f0b25e9f8cc518b4469b34e6a82972aaab",
+   "commit_date": "2025-10-07T11:14:51-07:00",
+   "file": "pyproject.toml",
+   "bytes": 8605,
+   "sha256": "06c1173404702cd936cf269fa6e60f96a204e80cc87462d966834d3a6496060c"
+  },
+  {
+   "repo": "getredash/redash",
+   "commit": "9503cc9fb88787538a324c74721304864ad47530",
+   "commit_date": "2025-10-08T07:44:29-04:00",
+   "file": "yarn.lock",
+   "bytes": 655908,
+   "sha256": "0f11d6548cbfeeb27c383b3e5e57c5d642abdee0f893ed947a5e4dcbc60b9276"
+  },
+  {
+   "repo": "getredash/redash",
+   "commit": "9503cc9fb88787538a324c74721304864ad47530",
+   "commit_date": "2025-10-08T07:44:29-04:00",
+   "file": "poetry.lock",
+   "bytes": 464539,
+   "sha256": "92bc865becaad7441161b1e361df4405b15e027c73ab304ae99a00c15e8f76cd"
+  },
+  {
+   "repo": "getredash/redash",
+   "commit": "9503cc9fb88787538a324c74721304864ad47530",
+   "commit_date": "2025-10-08T07:44:29-04:00",
+   "file": "package.json",
+   "bytes": 6947,
+   "sha256": "f12c162a117512f5d72efecbc44fe26f1058560de2164b6f2749fd0de85713cf"
+  },
+  {
+   "repo": "getredash/redash",
+   "commit": "9503cc9fb88787538a324c74721304864ad47530",
+   "commit_date": "2025-10-08T07:44:29-04:00",
+   "file": "pyproject.toml",
+   "bytes": 3912,
+   "sha256": "03b000c383fcdf7dba8f94a70b719b6db22b676ad8e755f5c87d143a22477139"
+  },
+  {
+   "repo": "PrefectHQ/prefect",
+   "commit": "18000dd594e297e9e8731bd617bdae6ee8111ade",
+   "commit_date": "2025-10-08T09:05:11-05:00",
+   "file": "uv.lock",
+   "bytes": 1075141,
+   "sha256": "a56667591f2a802ee62eaeb7d25c06467c516a148fe5269c3c1e219820c92676"
+  },
+  {
+   "repo": "PrefectHQ/prefect",
+   "commit": "18000dd594e297e9e8731bd617bdae6ee8111ade",
+   "commit_date": "2025-10-08T09:05:11-05:00",
+   "file": "pyproject.toml",
+   "bytes": 10903,
+   "sha256": "356ebae29e10113a4fcca2de3ee97a6bdee78fd68c15563533a49278375e44e2"
+  },
+  {
+   "repo": "zulip/zulip",
+   "commit": "7bce6361b3eff25be68f3fa023bf91c3b7d9da18",
+   "commit_date": "2025-10-08T15:04:41-07:00",
+   "file": "pnpm-lock.yaml",
+   "bytes": 721976,
+   "sha256": "c589a453877df865778d5d3713292cdb535b1abcd9cd03cac57f78e97f6290f8"
+  },
+  {
+   "repo": "zulip/zulip",
+   "commit": "7bce6361b3eff25be68f3fa023bf91c3b7d9da18",
+   "commit_date": "2025-10-08T15:04:41-07:00",
+   "file": "uv.lock",
+   "bytes": 950724,
+   "sha256": "b50b64a8fa0b916ffd64b382260459431625a7b6e8204bb6cfca61c5db3895ef"
+  },
+  {
+   "repo": "zulip/zulip",
+   "commit": "7bce6361b3eff25be68f3fa023bf91c3b7d9da18",
+   "commit_date": "2025-10-08T15:04:41-07:00",
+   "file": "package.json",
+   "bytes": 6420,
+   "sha256": "6d235b4d8cd7aae07110c9f2ae6f4b373cce9a081bf2ea3bc23fc0eee2baa268"
+  },
+  {
+   "repo": "zulip/zulip",
+   "commit": "7bce6361b3eff25be68f3fa023bf91c3b7d9da18",
+   "commit_date": "2025-10-08T15:04:41-07:00",
+   "file": "pyproject.toml",
+   "bytes": 14277,
+   "sha256": "55701e46209689e22cba8c910e2279c41cec2847502e9468f498afd6bf0ce1dc"
+  },
+  {
+   "repo": "mlflow/mlflow",
+   "commit": "4f36b644a3090e09ba5c191a4e4fc04454ace0b7",
+   "commit_date": "2025-10-08T13:54:53+00:00",
+   "file": "uv.lock",
+   "bytes": 1275714,
+   "sha256": "bedee87388d1a0cc623bad058a114bd141d62fbd662c994a9d5f7d8f6f6737c1"
+  },
+  {
+   "repo": "mlflow/mlflow",
+   "commit": "4f36b644a3090e09ba5c191a4e4fc04454ace0b7",
+   "commit_date": "2025-10-08T13:54:53+00:00",
+   "file": "pyproject.toml",
+   "bytes": 13664,
+   "sha256": "411e3171dfc1b80ac3291130e352886f8a302ee029614f9d78a6c0d355569267"
+  }
+ ],
+ "environment": {
+  "python": "3.12.3",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "syft": "Version:       1.54.1",
+  "pandas": "3.0.2",
+  "scikit-learn": "1.8.0",
+  "networkx": "3.6.1",
+  "cvss": "3.6",
+  "semantic_version": "2.10.0"
+ }
+}

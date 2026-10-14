@@ -1,0 +1,16 @@
+project,ecosystems,commit,commit_date,components,direct_components,max_depth,vulnerable_components,findings,critical,high,poc_12m_positives,kev_12m_positives
+TryGhost__Ghost,npm,f709a1a00b,2025-10-08,3404,315,10,53,63,9,23,2,0
+n8n-io__n8n,npm,65b1df9210,2025-10-08,3223,485,7,14,16,0,1,0,0
+nocodb__nocodb,npm,7e19067b84,2025-10-08,3219,466,9,21,25,2,5,1,0
+calcom__cal.com,npm,4dfab874e0,2025-10-08,3022,221,10,68,100,15,22,3,0
+zulip__zulip,PyPI+npm,7bce6361b3,2025-10-08,2641,302,10,3,4,0,2,0,0
+outline__outline,npm,7a148b0353,2025-10-08,1665,171,10,13,13,1,4,0,0
+strapi__strapi,npm,d6c661f8ab,2025-10-08,1200,55,9,16,28,2,4,0,1
+open-webui__open-webui,PyPI+npm,5043e7fc8c,2025-10-08,1043,121,8,25,44,2,9,3,0
+ether__etherpad-lite,npm,04c6c26690,2025-10-08,1035,181,9,0,0,0,0,0,0
+mastodon__mastodon,npm,5bc7c4b7e8,2025-10-08,1028,7,11,1,1,0,0,0,0
+getredash__redash,PyPI+npm,9503cc9fb8,2025-10-08,821,118,8,30,49,3,16,2,0
+langflow-ai__langflow,PyPI,312225bce9,2025-10-08,675,35,6,9,14,0,6,1,0
+PrefectHQ__prefect,PyPI,18000dd594,2025-10-08,333,34,4,9,10,2,1,0,0
+mlflow__mlflow,PyPI,4f36b644a3,2025-10-08,294,15,3,4,5,0,0,0,0
+paperless-ngx__paperless-ngx,PyPI,495159f0b2,2025-10-07,224,28,5,1,2,0,1,0,0

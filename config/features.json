@@ -1,0 +1,42 @@
+{
+ "population_features": [
+  "advisory_age_days",
+  "cvss_base",
+  "sev_rank",
+  "AV",
+  "AC",
+  "PR",
+  "UI",
+  "SC",
+  "C",
+  "I",
+  "A",
+  "cwe_primary",
+  "n_advisories",
+  "n_affected_packages",
+  "n_ecosystems",
+  "has_fix",
+  "eco_npm",
+  "eco_PyPI",
+  "eco_Maven",
+  "eco_Packagist",
+  "eco_Go",
+  "eco_NuGet",
+  "eco_RubyGems",
+  "eco_crates.io",
+  "poc_count_at_T",
+  "epss_at_T",
+  "epss_pct_at_T"
+ ],
+ "forbidden": [
+  "cand_kev",
+  "cand_poc",
+  "cve",
+  "kev_12m",
+  "kev_date",
+  "poc_12m",
+  "poc_first_date",
+  "published",
+  "window_end"
+ ]
+}

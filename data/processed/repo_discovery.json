@@ -1,0 +1,378 @@
+[
+ {
+  "ecosystem": "npm",
+  "repo": "juice-shop/juice-shop",
+  "status": "no_supported_lockfile",
+  "commit": "47b2eade5abb981300754032b01a8c67a50faf84",
+  "commit_date": "2025-10-08T23:09:58+02:00",
+  "commits_prior_12m": 1096,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "mastodon/mastodon",
+  "status": "no_supported_lockfile",
+  "commit": "5bc7c4b7e880ee1456dc21987d8fba32e340d31e",
+  "commit_date": "2025-10-08T17:17:03+00:00",
+  "commits_prior_12m": 2273,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "n8n-io/n8n",
+  "status": "no_supported_lockfile",
+  "commit": "65b1df921063ab3781152fea067062b9b0e0e402",
+  "commit_date": "2025-10-08T18:21:44+01:00",
+  "commits_prior_12m": 3806,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "TryGhost/Ghost",
+  "status": "no_supported_lockfile",
+  "commit": "f709a1a00b27faee22e1a2681afb12da812a6be0",
+  "commit_date": "2025-10-08T22:27:54+00:00",
+  "commits_prior_12m": 3536,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "strapi/strapi",
+  "status": "no_supported_lockfile",
+  "commit": "d6c661f8ab4a198d3e4c6a387b9b8f267a100766",
+  "commit_date": "2025-10-08T16:25:24+02:00",
+  "commits_prior_12m": 1025,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "NodeBB/NodeBB",
+  "status": "no_supported_lockfile",
+  "commit": "623cec9d910c03dd67c94db3ce45bf334dafd869",
+  "commit_date": "2025-10-08T11:07:43-04:00",
+  "commits_prior_12m": 2076,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "ether/etherpad-lite",
+  "status": "no_supported_lockfile",
+  "commit": "04c6c26690c7dcc88d281d5012448a91e0844556",
+  "commit_date": "2025-10-08T22:57:53+02:00",
+  "commits_prior_12m": 332,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "outline/outline",
+  "status": "no_supported_lockfile",
+  "commit": "7a148b035315050864d14f399156474765e61fa2",
+  "commit_date": "2025-10-08T01:59:40+00:00",
+  "commits_prior_12m": 1369,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "calcom/cal.com",
+  "status": "no_supported_lockfile",
+  "commit": "4dfab874e02f945a45768f71f7aea674ef1b4162",
+  "commit_date": "2025-10-08T14:38:54+00:00",
+  "commits_prior_12m": 3609,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "appsmithorg/appsmith",
+  "status": "no_supported_lockfile",
+  "commit": "d1dfa4436cf956c8286d2ae273e589a8ca3b4206",
+  "commit_date": "2025-10-08T12:25:24+06:00",
+  "commits_prior_12m": 1459,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "nocodb/nocodb",
+  "status": "no_supported_lockfile",
+  "commit": "7e19067b84a6e63df28783bd524385d21072916e",
+  "commit_date": "2025-10-08T22:22:38+05:30",
+  "commits_prior_12m": 14313,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "hoppscotch/hoppscotch",
+  "status": "no_supported_lockfile",
+  "commit": "c31f74829dbb50ba1c52d0eeb22c689f9d7df5a4",
+  "commit_date": "2025-10-08T13:31:29+05:30",
+  "commits_prior_12m": 450,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "immich-app/immich",
+  "status": "no_supported_lockfile",
+  "commit": "53680d9643f7de5c18e2fd5195b4b6706cf6066f",
+  "commit_date": "2025-10-08T15:10:58-04:00",
+  "commits_prior_12m": 2903,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "medusajs/medusa",
+  "status": "no_supported_lockfile",
+  "commit": "0cbd9f0bc315b3eda1770ac301061f1576856387",
+  "commit_date": "2025-10-08T17:44:00+02:00",
+  "commits_prior_12m": 2358,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "payloadcms/payload",
+  "status": "no_supported_lockfile",
+  "commit": "fb93cd13bcd66dca3777826fc420a941d3cb75ab",
+  "commit_date": "2025-10-08T21:43:03+00:00",
+  "commits_prior_12m": 2687,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "RocketChat/Rocket.Chat",
+  "status": "ok",
+  "commit": "5ceef6f6386f6b4b1a88427e614628d8226fa4d2",
+  "commit_date": "2025-10-08T19:39:15-03:00",
+  "commits_prior_12m": 1921,
+  "lockfiles": [
+   ".github/actions/update-version-durability/package-lock.json"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "directus/directus",
+  "status": "no_supported_lockfile",
+  "commit": "91fe05b50c43b5ddcefe7446a9884b9d4d99fb2c",
+  "commit_date": "2025-10-08T19:47:37+02:00",
+  "commits_prior_12m": 862,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "usememos/memos",
+  "status": "no_supported_lockfile",
+  "commit": "20233c7051cd6504171f31c6fa1e4ddc48337489",
+  "commit_date": "2025-10-09T00:40:08+08:00",
+  "commits_prior_12m": 819,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "linkwarden/linkwarden",
+  "status": "no_supported_lockfile",
+  "commit": "96472243db119c77e6775fa83edfdf79d06d4948",
+  "commit_date": "2025-10-04T04:08:02-04:00",
+  "commits_prior_12m": 1106,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "npm",
+  "repo": "freeCodeCamp/freeCodeCamp",
+  "status": "no_supported_lockfile",
+  "commit": "03d9d14d2d759136cbb8158543c97a1b75b74044",
+  "commit_date": "2025-10-08T13:33:55-07:00",
+  "commits_prior_12m": 2965,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "langflow-ai/langflow",
+  "status": "ok",
+  "commit": "312225bce9eb2ea2114d24350d26aeae352d7ba9",
+  "commit_date": "2025-10-08T22:27:14+00:00",
+  "commits_prior_12m": 2714,
+  "lockfiles": [
+   "src/backend/base/uv.lock",
+   "uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "open-webui/open-webui",
+  "status": "ok",
+  "commit": "5043e7fc8c826af077d1dcff3711cd568349eb22",
+  "commit_date": "2025-10-08T16:54:06-05:00",
+  "commits_prior_12m": 7329,
+  "lockfiles": [
+   "uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "paperless-ngx/paperless-ngx",
+  "status": "ok",
+  "commit": "495159f0b25e9f8cc518b4469b34e6a82972aaab",
+  "commit_date": "2025-10-07T11:14:51-07:00",
+  "commits_prior_12m": 1007,
+  "lockfiles": [
+   "uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "apache/airflow",
+  "status": "ok",
+  "commit": "463d51c885c010d3650d36be481d3135aed07b15",
+  "commit_date": "2025-10-08T21:07:48+02:00",
+  "commits_prior_12m": 7269,
+  "lockfiles": [
+   "dev/breeze/uv.lock",
+   "providers-summary-docs/uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "getredash/redash",
+  "status": "ok",
+  "commit": "9503cc9fb88787538a324c74721304864ad47530",
+  "commit_date": "2025-10-08T07:44:29-04:00",
+  "commits_prior_12m": 109,
+  "lockfiles": [
+   "poetry.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "PrefectHQ/prefect",
+  "status": "ok",
+  "commit": "18000dd594e297e9e8731bd617bdae6ee8111ade",
+  "commit_date": "2025-10-08T09:05:11-05:00",
+  "commits_prior_12m": 1847,
+  "lockfiles": [
+   "uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "DefectDojo/django-DefectDojo",
+  "status": "no_supported_lockfile",
+  "commit": "26fb5c1e6944c0817c72a3c6a056ed06177ed07f",
+  "commit_date": "2025-10-08T21:34:16+02:00",
+  "commits_prior_12m": 1961,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "netbox-community/netbox",
+  "status": "no_supported_lockfile",
+  "commit": "bb290dc792e5c9e570cba67f4a83eca6c164dde4",
+  "commit_date": "2025-10-08T18:24:12-04:00",
+  "commits_prior_12m": 1117,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "zulip/zulip",
+  "status": "ok",
+  "commit": "7bce6361b3eff25be68f3fa023bf91c3b7d9da18",
+  "commit_date": "2025-10-08T15:04:41-07:00",
+  "commits_prior_12m": 5960,
+  "lockfiles": [
+   "uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "mlflow/mlflow",
+  "status": "ok",
+  "commit": "4f36b644a3090e09ba5c191a4e4fc04454ace0b7",
+  "commit_date": "2025-10-08T13:54:53+00:00",
+  "commits_prior_12m": 2434,
+  "lockfiles": [
+   "uv.lock"
+  ],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "frappe/frappe",
+  "status": "no_supported_lockfile",
+  "commit": "dc25feb6125cf8e52347f1535c910d21e7493601",
+  "commit_date": "2025-10-08T18:18:33+05:30",
+  "commits_prior_12m": 3640,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "readthedocs/readthedocs.org",
+  "status": "no_supported_lockfile",
+  "commit": "acaf4e017736e33bbdcd2b61673d9d748f59e23d",
+  "commit_date": "2025-10-08T14:56:17-07:00",
+  "commits_prior_12m": 546,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "OWASP/pygoat",
+  "status": "clone_failed",
+  "detail": "Cloning into '/home/claude/project6/data/raw/clones/OWASP__pygoat'...\nfatal: could not read Username for 'https://github.com': No such device or address\n"
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "apache/superset",
+  "status": "no_supported_lockfile",
+  "commit": "82e47635881a2c89328ede3a2d7794d6749f31bc",
+  "commit_date": "2025-10-08T09:58:03-07:00",
+  "commits_prior_12m": 1838,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "django-cms/django-cms",
+  "status": "no_supported_lockfile",
+  "commit": "d18ef63dbeaa5d5babb081a5cb0e59c5d7d049ec",
+  "commit_date": "2025-10-06T15:01:36+02:00",
+  "commits_prior_12m": 174,
+  "lockfiles": [],
+  "has_license_file": true
+ },
+ {
+  "ecosystem": "pypi",
+  "repo": "pretalx/pretalx",
+  "status": "no_supported_lockfile",
+  "commit": "d83804eccfc1a21028d6e4de127158d6753ae621",
+  "commit_date": "2025-10-06T03:47:36+02:00",
+  "commits_prior_12m": 833,
+  "lockfiles": [],
+  "has_license_file": true
+ }
+]

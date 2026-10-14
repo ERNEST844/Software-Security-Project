@@ -1,0 +1,77 @@
+[
+ {
+  "repo": "mastodon/mastodon",
+  "file": "LICENSE",
+  "header": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation,"
+ },
+ {
+  "repo": "n8n-io/n8n",
+  "file": "LICENSE.md",
+  "header": "# License / Portions of this software are licensed as follows: / - Content of branches other than the main bra"
+ },
+ {
+  "repo": "TryGhost/Ghost",
+  "file": "LICENSE",
+  "header": "Copyright (c) 2013-2025 Ghost Foundation / Permission is hereby granted, free of charge, to any person / obtai"
+ },
+ {
+  "repo": "strapi/strapi",
+  "file": "LICENSE",
+  "header": "Copyright (c) 2015-present Strapi Solutions SAS / Portions of the Strapi software are licensed as follows: / *"
+ },
+ {
+  "repo": "ether/etherpad-lite",
+  "file": "LICENSE",
+  "header": "Apache License / Version 2.0, January 2004 / http://www.apache.org/licenses/"
+ },
+ {
+  "repo": "outline/outline",
+  "file": "LICENSE",
+  "header": "Business Source License 1.1 / Parameters / Licensor:             General Outline, Inc."
+ },
+ {
+  "repo": "calcom/cal.com",
+  "file": "LICENSE",
+  "header": "Copyright (c) 2020-present Cal.com, Inc. / Portions of this software are licensed as follows: / * All content "
+ },
+ {
+  "repo": "nocodb/nocodb",
+  "file": "LICENSE",
+  "header": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation,"
+ },
+ {
+  "repo": "langflow-ai/langflow",
+  "file": "LICENSE",
+  "header": "MIT License / Copyright (c) 2024 Langflow / Permission is hereby granted, free of charge, to any person obtain"
+ },
+ {
+  "repo": "open-webui/open-webui",
+  "file": "LICENSE",
+  "header": "Copyright (c) 2023-2025 Timothy Jaeryang Baek (Open WebUI) / All rights reserved. / Redistribution and use in "
+ },
+ {
+  "repo": "paperless-ngx/paperless-ngx",
+  "file": "LICENSE",
+  "header": "GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007 / Copyright (C) 2007 Free Software Foundation, Inc. <http"
+ },
+ {
+  "repo": "getredash/redash",
+  "file": "LICENSE",
+  "header": "Copyright (c) 2013-2020, Arik Fraimovich. / All rights reserved. / Redistribution and use in source and binary"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "file": "LICENSE",
+  "header": "Apache License / Version 2.0, January 2004 / http://www.apache.org/licenses/"
+ },
+ {
+  "repo": "zulip/zulip",
+  "file": "LICENSE",
+  "header": "Apache License / Version 2.0, January 2004 / http://www.apache.org/licenses/"
+ },
+ {
+  "repo": "mlflow/mlflow",
+  "file": "LICENSE.txt",
+  "header": "Copyright 2018 Databricks, Inc.  All rights reserved. / Apache License / Version 2.0, January 2004"
+ }
+]

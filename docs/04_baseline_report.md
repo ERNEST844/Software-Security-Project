@@ -1,0 +1,59 @@
+# Activity 4 — Baselines
+
+**Run:** `python src/07_baselines.py` (results in `results/baseline_population_results.csv`, `results/baseline_project_results.csv`).
+**Held-out test cohort:** 2025-10-08 (features as-of that date; label window to 2026-10-08). Earlier cohorts are shown for stability only.
+
+## 1. Baselines implemented
+
+| ID | Rule | Why it is the right baseline |
+|---|---|---|
+| B1 | Rank by CVSS base score, highest first (missing score ranks last) | What most scanners and teams do today. |
+| B2b | Rank first by "a public GitHub PoC existed at T", then by CVSS | Transparent exploit-evidence rule; **KEV task only** (for the PoC label every candidate has no PoC at T by construction). |
+| B2 | Rank by EPSS at T, then CVSS | **Implemented but not yet run**: the EPSS host is unreachable from the build environment. Run `src/fetch_epss.py` locally, then `05b`, `06`, `07`. |
+| Random | Expected AUC 0.5; expected average precision = prevalence; expected recall in the top k% = k% | Floor for context. |
+
+Ties (for example many CVEs share CVSS 9.8) are handled by **expectation under random tie-breaking**, so results never depend on input order.
+
+## 2. Results — label L1 (`kev_12m`: becomes a CISA-KEV entry within 12 months)
+
+| Cohort | Baseline | Positives | Prevalence % | ROC AUC (95% CI) | Avg precision | Recall top 1% | Recall top 5% (95% CI) | Recall top 10% |
+|---|---|---|---|---|---|---|---|---|
+| 2022-10-08 | B1_cvss_only | 8 | 0.065 | 0.827 (0.72-0.90) | 0.002 | 0.015 | 0.153 (0.00-0.30) | 0.326 |
+| 2022-10-08 | B2b_poc_then_cvss | 8 | 0.065 | 0.864 (0.73-0.98) | 0.0107 | 0.246 | 0.512 (0.20-1.00) | 0.575 |
+| 2023-10-08 | B1_cvss_only | 4 | 0.026 | 0.8 (0.64-0.94) | 0.0007 | 0.002 | 0.094 (0.00-0.30) | 0.209 |
+| 2023-10-08 | B2b_poc_then_cvss | 4 | 0.026 | 0.964 (0.91-0.99) | 0.0057 | 0.0 | 0.759 (0.13-1.00) | 0.887 |
+| 2024-10-08 | B1_cvss_only | 5 | 0.027 | 0.721 (0.54-0.94) | 0.0007 | 0.0 | 0.16 (0.00-0.40) | 0.363 |
+| 2024-10-08 | B2b_poc_then_cvss | 5 | 0.027 | 0.983 (0.97-0.99) | 0.0089 | 0.36 | 1.0 (1.00-1.00) | 1.0 |
+| 2025-10-08 | B1_cvss_only | 11 | 0.052 | 0.787 (0.67-0.91) | 0.003 | 0.167 | 0.299 (0.09-0.52) | 0.449 |
+| 2025-10-08 | B2b_poc_then_cvss | 11 | 0.052 | 0.952 (0.90-0.99) | 0.0175 | 0.321 | 0.818 (0.56-1.00) | 0.862 |
+
+## 3. Results — label L2 (`poc_12m`: first public PoC appears within 12 months)
+
+| Cohort | Baseline | Positives | Prevalence % | ROC AUC (95% CI) | Avg precision | Recall top 1% | Recall top 5% (95% CI) | Recall top 10% |
+|---|---|---|---|---|---|---|---|---|
+| 2022-10-08 | B1_cvss_only | 42 | 0.355 | 0.73 (0.65-0.81) | 0.0106 | 0.064 | 0.213 (0.13-0.30) | 0.399 |
+| 2023-10-08 | B1_cvss_only | 70 | 0.474 | 0.617 (0.56-0.68) | 0.0072 | 0.03 | 0.103 (0.05-0.15) | 0.194 |
+| 2024-10-08 | B1_cvss_only | 187 | 1.066 | 0.615 (0.58-0.65) | 0.0163 | 0.032 | 0.092 (0.06-0.12) | 0.167 |
+| 2025-10-08 | B1_cvss_only | 137 | 0.679 | 0.663 (0.62-0.71) | 0.0124 | 0.03 | 0.116 (0.07-0.16) | 0.251 |
+
+## 4. Project-level results (15 repositories, snapshot 2025-10-08) — descriptive only
+
+| Label | Candidate findings | Positives | CVSS-only AUC | Recall top 10% | Recall top 20% |
+|---|---|---|---|---|---|
+| kev_12m | 357 | 1 | 0.308 | 0.0 | 0.0 |
+| poc_12m | 318 | 12 | 0.65 | 0.167 | 0.42 |
+
+CVSS scores of the 12 PoC-positive findings: 3.7, 4.2, 4.2, 6.4, 6.4, 7.2, 7.5, 7.5, 7.7, 7.7, 9.1, 9.3 (median of all candidate findings: 6.1). The single KEV-positive finding scored 5.3 (all-findings median 6.2).
+
+## 5. What the baselines show (and what they do not)
+
+1. **CVSS is a weak ranker of future exploitation signals.** On the test cohort, CVSS-only captures about 12% of future-PoC vulnerabilities in its top 5% (random would capture 5%), with average precision about 1.8 times the prevalence. For KEV it is better (AUC 0.79, top-5% recall 0.30) but the interval is wide (0.09–0.52) because there are only 11 positives.
+2. **Exploit-evidence at T helps a lot for KEV.** The transparent "PoC first, then CVSS" rule reaches AUC 0.95 and top-5% recall 0.82 (interval 0.56–1.00) on the test cohort, and beat CVSS-only on top-5% recall in every cohort (AUC gains were smaller and intervals overlap in the 2022 cohort). This is a legitimate as-of-T signal (the PoC existed before the KEV listing; no leakage — see leakage checks C5, C10), and it is the bar a learned model must clear in Activity 5.
+3. **Statistical power is low for L1.** Positives are 4–11 per cohort. Intervals are wide, cohorts disagree on the exact numbers, and no claim should rest on L1 alone. L2 (42–187 positives) has tighter intervals.
+4. **Project-level numbers are anecdotes, not evidence.** With 1 KEV and 12 PoC positives, only the direction is informative: CVSS-only ranking puts most PoC-positive findings outside its top 10%.
+5. **H1 is only partially tested.** The exploit-evidence part (PoC) supports it for KEV; the EPSS part is pending the EPSS download.
+
+## 6. Limitations specific to the baselines
+- B2b uses PoC existence, which is correlated with the KEV outcome through shared exploitation interest; it is a proxy for the information a defender could have had on day T, not a causal claim.
+- CVSS vectors are the 2026-10-13 versions of the advisory records (see protocol §8, item 3).
+- EPSS-based baseline pending; do not quote H1 as confirmed until it is run.

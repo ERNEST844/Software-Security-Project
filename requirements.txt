@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+scikit-learn
+networkx
+pyyaml
+requests
+cvss
+semantic-version
+packaging

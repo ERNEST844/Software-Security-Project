@@ -64,7 +64,13 @@ for f in sorted(glob.glob(SBOM_GLOB)):
             ancestors=len(nx.ancestors(G, key)) if key in vuln_nodes else np.nan,
             descendants=len(nx.descendants(G, key)) if key in vuln_nodes else np.nan, is_vulnerable=int(key in vuln_nodes)))
     print(f"{project:34} comps={len(meta):5} roots={len(roots):4} max_depth={max(depth.values()) if depth else 0:2} vulnerable_components={len(vuln_nodes):4}")
-comp = pd.DataFrame(comp_rows); fnd = pd.DataFrame(find_rows)
+comp = pd.DataFrame(comp_rows, columns=[
+    "project", "component", "name", "version", "ecosystem", "is_direct", "depth",
+    "fan_in", "fan_out", "pagerank", "ancestors", "descendants", "is_vulnerable",
+])
+fnd = pd.DataFrame(find_rows, columns=[
+    "project", "component", "name", "version", "ecosystem", "ghsa_id",
+])
 comp.to_csv(f"{ROOT}/data/processed/project_components_{TAG}.csv", index=False)
 fnd.to_csv(f"{ROOT}/data/processed/project_findings_raw_{TAG}.csv", index=False)
 print("as-of:", ASOF, "| components:", len(comp), "| raw findings (component x advisory):", len(fnd), "| unparsable-version comparisons:", dict(unparsed))

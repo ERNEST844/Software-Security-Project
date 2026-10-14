@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^pytest -q$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -m compileall src$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

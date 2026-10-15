@@ -31,6 +31,7 @@ def scores(df, task):
     out = {"B1_cvss_only": df.cvss_base.fillna(-1).values}
     if task == "kev": out["B2b_poc_then_cvss"] = ((df.poc_count_at_T > 0) * 100 + df.cvss_base.fillna(0)).values
     if df.epss_at_T.notna().any(): out["B2_epss_then_cvss"] = (df.epss_at_T.fillna(0) * 100 + df.cvss_base.fillna(0) / 100).values
+    else: print(f"WARNING: no EPSS scores for cohort {df.snapshot.iloc[0].date()} - baseline B2 skipped. Run src/fetch_epss.py, then 05b, 06, 07.")
     return out
 rows = []
 for T, g in pop.groupby("snapshot"):

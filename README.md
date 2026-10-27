@@ -10,6 +10,12 @@ UTAMU S26.CSC 7203 Security of Software. Goal: rank vulnerable third-party depen
 3. `docs/03_preprocessing_features_eda_report.md` — Activity 3
 4. `docs/04_baseline_report.md` — Activity 4
 
+## Deliverables
+- `deliverables/reports/` — Word reports and an alternate baseline report copy
+- `deliverables/presentation/` — presentation and speech script
+- `deliverables/references/` — spreadsheet and CSV literature matrices
+- `deliverables/archive/` — original ZIP archive
+
 ## Reproduce
 ```
 pip install -r requirements.txt

@@ -9,7 +9,7 @@
   python run_all.py --clean-room --keep   same, and keep the temporary folder for inspection
 
 Notes
-  * Step ids: fetch, 00, 01, 02, 03, 04, 04now, 05a, epss, 05b, 06, 07, 08, 09.
+  * Step ids: fetch, 00, 01, 02, 03, 04, 04now, 05a, epss, 05b, 06, 07, 08, 09, 10, 11, 12, 13.
   * After step 06 the run is stopped unless results/leakage_checks.json says all_passed.
   * Every step runs with PYTHONUTF8=1 so files are read/written as UTF-8 on Windows too.
   * results/run_manifest.json records step timings, versions and SHA-256 of the key outputs.
@@ -36,9 +36,15 @@ STEPS = [  # id, label, command (relative to project root), extra environment
     ("07", "baselines", [PY, "src/07_baselines.py"], {}),
     ("08", "provenance manifest + EDA", [PY, "src/08_provenance_and_eda.py"], {}),
     ("09", "sync report tables and check quoted numbers", [PY, "src/09_render_report_tables.py"], {}),
+    ("10", "Activity 5: learned rankers", [PY, "src/10_models.py"], {}),
+    ("11", "Activity 6: hybrid engine + remediation plan", [PY, "src/11_hybrid_engine.py"], {}),
+    ("12", "Activity 7: evaluation + figures", [PY, "src/12_evaluation.py"], {}),
+    ("13", "Activity 8: interactive standalone dashboard", [PY, "src/13_dashboard.py"], {}),
 ]
 KEY_OUTPUTS = ["data/processed/population_cohorts.csv", "data/processed/project_findings_t0.csv",
-               "results/baseline_population_results.csv", "results/baseline_project_results.csv", "results/leakage_checks.json"]
+               "results/baseline_population_results.csv", "results/baseline_project_results.csv", "results/leakage_checks.json",
+               "results/model_population_results.csv", "results/hybrid_ablation.csv", "results/remediation_plan.csv",
+               "results/evaluation_summary.json", "results/dashboard.html"]
 
 
 def sha256(path):

@@ -1,0 +1,11 @@
+label,ecosystem,cves,positives,auc_B1,auc_rule,auc_hybrid
+kev_12m,npm,3226,3,0.454,0.735,0.772
+kev_12m,Packagist,4266,4,0.964,0.924,0.927
+poc_12m,npm,3065,37,0.62,0.616,0.643
+poc_12m,PyPI,3605,33,0.683,0.678,0.711
+poc_12m,Maven,5437,29,0.616,0.707,0.678
+poc_12m,Packagist,4093,16,0.782,0.792,0.719
+poc_12m,Go,2231,16,0.57,0.57,0.606
+poc_12m,NuGet,661,3,0.727,0.591,0.722
+poc_12m,RubyGems,811,6,0.787,0.779,0.749
+poc_12m,crates.io,672,3,0.322,0.322,0.194

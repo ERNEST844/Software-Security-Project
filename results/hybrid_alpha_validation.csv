@@ -1,0 +1,13 @@
+label,model,combination,validation_auc,validation_recall_top5,chosen
+kev_12m,logreg,gate,0.9872,1.0,False
+kev_12m,logreg,0.5,0.9867,1.0,False
+kev_12m,logreg,0.25,0.9878,1.0,True
+kev_12m,logreg,0.75,0.9841,0.8,False
+kev_12m,logreg,0.0,0.984,1.0,False
+kev_12m,logreg,1.0,0.978,0.8,False
+poc_12m,forest,gate,0.7462,0.227,True
+poc_12m,forest,0.5,0.7111,0.138,False
+poc_12m,forest,0.25,0.6698,0.127,False
+poc_12m,forest,0.75,0.736,0.149,False
+poc_12m,forest,0.0,0.6282,0.105,False
+poc_12m,forest,1.0,0.7462,0.227,False

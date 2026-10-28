@@ -1,0 +1,78 @@
+{
+ "test_cohort": "2025-10-08",
+ "validation_cohort": "2024-10-08",
+ "dev_train_cohorts": [
+  "2022-10-08",
+  "2023-10-08"
+ ],
+ "final_train_cohorts": [
+  "2022-10-08",
+  "2023-10-08",
+  "2024-10-08"
+ ],
+ "epss_used": true,
+ "models": {
+  "kev_12m/logreg": {
+   "hyperparameters": {
+    "C": 0.01
+   },
+   "validation_auc": 0.978,
+   "fit_seconds": 1.07,
+   "score_seconds_test": 0.145,
+   "n_scored": 21253,
+   "seed": 42
+  },
+  "kev_12m/gboost": {
+   "hyperparameters": {
+    "max_depth": 2,
+    "lr": 0.1
+   },
+   "validation_auc": 0.9768,
+   "fit_seconds": 6.61,
+   "score_seconds_test": 0.792,
+   "n_scored": 21253,
+   "seed": 42
+  },
+  "kev_12m/forest": {
+   "hyperparameters": {
+    "leaf": 50
+   },
+   "validation_auc": 0.9671,
+   "fit_seconds": 5.27,
+   "score_seconds_test": 1.309,
+   "n_scored": 21253,
+   "seed": 42
+  },
+  "poc_12m/logreg": {
+   "hyperparameters": {
+    "C": 0.1
+   },
+   "validation_auc": 0.7238,
+   "fit_seconds": 3.26,
+   "score_seconds_test": 0.299,
+   "n_scored": 20299,
+   "seed": 42
+  },
+  "poc_12m/gboost": {
+   "hyperparameters": {
+    "max_depth": 2,
+    "lr": 0.05
+   },
+   "validation_auc": 0.7418,
+   "fit_seconds": 11.49,
+   "score_seconds_test": 0.401,
+   "n_scored": 20299,
+   "seed": 42
+  },
+  "poc_12m/forest": {
+   "hyperparameters": {
+    "leaf": 50
+   },
+   "validation_auc": 0.7462,
+   "fit_seconds": 8.85,
+   "score_seconds_test": 0.654,
+   "n_scored": 20299,
+   "seed": 42
+  }
+ }
+}

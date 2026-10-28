@@ -47,8 +47,7 @@ Residual risks that cannot be tested are listed in `results/leakage_checks.json`
 - **Technical lag is large:** median installed-version age 738 days; median lag to the newest release 630 days; median advisory age at T 211 days (many findings were fixable for months).
 - Findings per project range from 0 (etherpad-lite) to 100 (cal.com); full table in `results/project_summary_t0.csv`.
 - For context: if the same 2025 lockfiles were scanned today with today's advisories, the count would be **5,016** (not 374). This is a contrast of snapshot time, not a trend claim: it shows how quickly disclosed advisories accumulate against pinned versions.
-- Labelled positives among project findings: 1 KEV-positive, 12 PoC-positive (of 357 / 318 candidates).
-- Student-owned project: 15 components, 0 known vulnerabilities on 2026-10-13.
+- Labelled positives among project findings: 1 KEV-positive, 12 PoC-positive (of 357 KEV / 326 PoC candidates).
 
 ## 6. Population dataset
 67,431 rows (cohorts 12,319 / 15,392 / 18,368 / 21,352). Ecosystem coverage of the test cohort (CVEs per ecosystem, a CVE can span several): Maven 5,841, Packagist 4,285, PyPI 3,747, npm 3,233, Go 2,323, RubyGems 859, crates.io 691, NuGet 689. Positives per cohort: see protocol §6.2.

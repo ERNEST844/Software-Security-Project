@@ -1,5 +1,5 @@
 {
- "retrieved_utc": "2026-10-14T06:27:48.102821+00:00",
+ "retrieved_utc": "2026-10-27T12:34:12.246423+00:00",
  "sources": {
   "CISA_KEV": {
    "url": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json (GitHub mirror of the CISA catalogue)",
@@ -10,12 +10,12 @@
   },
   "GitHub_Advisory_Database": {
    "url": "https://github.com/github/advisory-database (advisories/github-reviewed)",
-   "commit_and_date": "36d4c87ce64759f762f4e3e0d65137da687b8272 2026-10-13T03:35:50+00:00",
+   "commit_and_date": "36d4c87ce64759f762f4e3e0d65137da687b8272 2026-10-13T03:35:50+00:00 (checkout unavailable in this run)",
    "note": "OSV-format; pinned by commit hash"
   },
   "PoC_in_GitHub": {
    "url": "https://github.com/nomi-sec/PoC-in-GitHub",
-   "commit_and_date": "7bf2d8795e2ddf4e1669efe296f9eeabe6091ca8 2026-10-13T10:44:16+09:00",
+   "commit_and_date": "39aae558770bc29538f7f877e6cb2538f19e34a8 2026-10-27T10:48:44+09:00",
    "note": "CVE -> GitHub PoC repositories with creation dates; noisy proxy"
   },
   "npm_registry": {
@@ -27,7 +27,42 @@
    "use": "release dates (immutable) for package-health features; fetched 2026-10-13"
   },
   "EPSS": {
-   "status": "NOT RETRIEVED in the build environment (host unreachable). Run src/fetch_epss.py locally, then re-run 05b/06/07."
+   "url": "https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz (daily files; see data_stats on first.org/epss)",
+   "status": "RETRIEVED",
+   "files": {
+    "2022-10-08": {
+     "bytes": 747596,
+     "model_version": "v2022.01.01",
+     "rows": 186002,
+     "score_date": "2022-10-08",
+     "sha256": "a31e4774a956d7f103c63317a1276242d929ea8d46b1dea493a2c6b7f40af38a",
+     "source": "https://epss.empiricalsecurity.com/epss_scores-2022-10-08.csv.gz"
+    },
+    "2023-10-08": {
+     "bytes": 1358421,
+     "model_version": "v2023.03.01",
+     "rows": 214377,
+     "score_date": "2023-10-08",
+     "sha256": "c844ad25e7f6f7c69df483cda954ed4ef13d5cbb02c26300313becd37afe6ffe",
+     "source": "https://epss.empiricalsecurity.com/epss_scores-2023-10-08.csv.gz"
+    },
+    "2024-10-08": {
+     "bytes": 1578985,
+     "model_version": "v2023.03.01",
+     "rows": 261301,
+     "score_date": "2024-10-08",
+     "sha256": "4d4289e82572afdac558a99354035486f5ba05703aebb4ad44630a2f0341f691",
+     "source": "https://epss.empiricalsecurity.com/epss_scores-2024-10-08.csv.gz"
+    },
+    "2025-10-08": {
+     "bytes": 1984598,
+     "model_version": "v2025.03.14",
+     "rows": 297266,
+     "score_date": "2025-10-08",
+     "sha256": "67aee1472bf8a6d26924a295fbee67b5f3eddd47e1269e981983c2c9b9c73c25",
+     "source": "https://epss.empiricalsecurity.com/epss_scores-2025-10-08.csv.gz"
+    }
+   }
   },
   "NVD": {
    "status": "not used; CVSS taken from GitHub advisory vectors and recomputed with the 'cvss' library"
@@ -340,12 +375,12 @@
   }
  ],
  "environment": {
-  "python": "3.12.3",
-  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
-  "syft": "Version:       1.54.1",
-  "pandas": "3.0.2",
-  "scikit-learn": "1.8.0",
-  "networkx": "3.6.1",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "syft": "unavailable in this run; previously recorded: Version:       1.54.1",
+  "pandas": "3.0.1",
+  "scikit-learn": "1.9.1",
+  "networkx": "3.7",
   "cvss": "3.6",
   "semantic_version": "2.10.0"
  }

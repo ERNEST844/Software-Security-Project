@@ -60,8 +60,13 @@ def b2_status():
 def h1_line():
     if not any(r["baseline"].startswith("B2_epss") for r in pop):
         return "5. **H1 is only partially tested.** The exploit-evidence part (PoC) supports it for KEV; the EPSS part is pending the EPSS download."
-    return ("5. **H1 - EPSS part now run.** The `B2_epss_then_cvss` rows are in the tables above. Compare them with B1 and B2b on the test cohort "
-            "and write the interpretation here by hand before treating H1 as confirmed or rejected.")
+    kev_b1 = get(TEST, "kev_12m", "B1_cvss_only")
+    kev_b2 = get(TEST, "kev_12m", "B2_epss_then_cvss")
+    poc_b1 = get(TEST, "poc_12m", "B1_cvss_only")
+    poc_b2 = get(TEST, "poc_12m", "B2_epss_then_cvss")
+    return (f"5. **H1 — EPSS results are mixed.** On the test cohort, KEV top-5% recall is {kev_b2['recall_top5pct']} with EPSS vs "
+            f"{kev_b1['recall_top5pct']} for CVSS-only; PoC top-5% recall is {poc_b2['recall_top5pct']} vs "
+            f"{poc_b1['recall_top5pct']}. A paired bootstrap comparison of B2 against B1 was not run, so these differences do not confirm H1.")
 
 
 BLOCKS = {"B2STATUS": b2_status, "L1": lambda: pop_table("kev_12m"), "L2": lambda: pop_table("poc_12m"),
@@ -91,16 +96,16 @@ def claims(doc_text):
     out = []
     def claim(text, ok): out.append((text, bool(ok)))
     r = get(TEST, "poc_12m", "B1_cvss_only")
-    claim("PoC test cohort: CVSS-only top-5% recall is about 12%", round(float(r["recall_top5pct"]) * 100) == 12)
+    claim("PoC test cohort: CVSS-only top-5% recall is about 11%", round(float(r["recall_top5pct"]) * 100) == 11)
     claim("PoC test cohort: average precision is about 1.8x prevalence", round(float(r["avg_precision"]) / (float(r["prevalence_pct"]) / 100), 1) == 1.8)
     r = get(TEST, "kev_12m", "B1_cvss_only")
-    claim("KEV test cohort: CVSS-only AUC 0.79, top-5% recall 0.30, interval 0.09-0.52",
-          f"{float(r['roc_auc']):.2f}" == "0.79" and f"{float(r['recall_top5pct']):.2f}" == "0.30" and r["recall_top5_ci95"] == "0.09-0.52")
+    claim("KEV test cohort: CVSS-only AUC 0.79, top-5% recall 0.30, interval 0.09-0.53",
+          f"{float(r['roc_auc']):.2f}" == "0.79" and f"{float(r['recall_top5pct']):.2f}" == "0.30" and r["recall_top5_ci95"] == "0.09-0.53")
     b = get(TEST, "kev_12m", "B2b_poc_then_cvss")
-    claim("KEV test cohort: PoC-first rule AUC 0.95, top-5% recall 0.82, interval 0.56-1.00",
-          f"{float(b['roc_auc']):.2f}" == "0.95" and f"{float(b['recall_top5pct']):.2f}" == "0.82" and b["recall_top5_ci95"] == "0.56-1.00")
-    claim("PoC-first rule beats CVSS-only on top-5% recall in every cohort",
-          all(float(get(c, "kev_12m", "B2b_poc_then_cvss")["recall_top5pct"]) > float(get(c, "kev_12m", "B1_cvss_only")["recall_top5pct"]) for c in COHORTS))
+    claim("KEV test cohort: PoC-first rule AUC 0.83, top-5% recall 0.42, interval 0.12-0.71",
+          f"{float(b['roc_auc']):.2f}" == "0.83" and f"{float(b['recall_top5pct']):.2f}" == "0.42" and b["recall_top5_ci95"] == "0.12-0.71")
+    claim("PoC-first rule does not beat CVSS-only on top-5% recall in every cohort",
+          not all(float(get(c, "kev_12m", "B2b_poc_then_cvss")["recall_top5pct"]) > float(get(c, "kev_12m", "B1_cvss_only")["recall_top5pct"]) for c in COHORTS))
     gains = {c: float(get(c, "kev_12m", "B2b_poc_then_cvss")["roc_auc"]) - float(get(c, "kev_12m", "B1_cvss_only")["roc_auc"]) for c in COHORTS}
     a, bb = ci(get(COHORTS[0], "kev_12m", "B1_cvss_only")["auc_ci95"]), ci(get(COHORTS[0], "kev_12m", "B2b_poc_then_cvss")["auc_ci95"])
     claim(f"First cohort has the smallest AUC gain and overlapping intervals ({COHORTS[0]})",
@@ -108,7 +113,7 @@ def claims(doc_text):
     kp = [int(get(c, "kev_12m", "B1_cvss_only")["positives"]) for c in COHORTS]
     pp = [int(get(c, "poc_12m", "B1_cvss_only")["positives"]) for c in COHORTS]
     claim("L1 has 4-11 positives per cohort", (min(kp), max(kp)) == (4, 11))
-    claim("L2 has 42-187 positives per cohort", (min(pp), max(pp)) == (42, 187))
+    claim("L2 has 41-181 positives per cohort", (min(pp), max(pp)) == (41, 181))
     p = {r["label"]: r for r in prj}
     claim("Project level: 1 KEV and 12 PoC positives", (int(p["kev_12m"]["positives"]), int(p["poc_12m"]["positives"])) == (1, 12))
     claim(f"Report names the configured test cohort ({TEST})", TEST in doc_text)

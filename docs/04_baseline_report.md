@@ -15,7 +15,7 @@
 | Random | Expected AUC 0.5; expected average precision = prevalence; expected recall in the top k% = k% | Floor for context. |
 
 <!-- AUTO:B2STATUS -->
-**B2 status: NOT RUN.** No EPSS files were present when `07_baselines.py` last ran. Run `src/fetch_epss.py`, then `05b`, `06`, `07`, then `src/09_render_report_tables.py`.
+**B2 status: RUN** for cohorts 2022-10-08, 2023-10-08, 2024-10-08, 2025-10-08 (rows named `B2_epss_then_cvss` in the tables below).
 <!-- /AUTO:B2STATUS -->
 
 Ties (for example many CVEs share CVSS 9.8) are handled by **expectation under random tie-breaking**, so results never depend on input order.
@@ -26,13 +26,17 @@ Ties (for example many CVEs share CVSS 9.8) are handled by **expectation under r
 | Cohort | Baseline | Positives | Prevalence % | ROC AUC (95% CI) | Avg precision | Recall top 1% | Recall top 5% (95% CI) | Recall top 10% |
 |---|---|---|---|---|---|---|---|---|
 | 2022-10-08 | B1_cvss_only | 8 | 0.065 | 0.827 (0.72-0.90) | 0.002 | 0.015 | 0.153 (0.00-0.30) | 0.326 |
-| 2022-10-08 | B2b_poc_then_cvss | 8 | 0.065 | 0.864 (0.73-0.98) | 0.0107 | 0.246 | 0.512 (0.20-1.00) | 0.575 |
-| 2023-10-08 | B1_cvss_only | 4 | 0.026 | 0.8 (0.64-0.94) | 0.0007 | 0.002 | 0.094 (0.00-0.30) | 0.209 |
-| 2023-10-08 | B2b_poc_then_cvss | 4 | 0.026 | 0.964 (0.91-0.99) | 0.0057 | 0.0 | 0.759 (0.13-1.00) | 0.887 |
+| 2022-10-08 | B2b_poc_then_cvss | 8 | 0.065 | 0.806 (0.71-0.89) | 0.0018 | 0.0 | 0.055 (0.00-0.11) | 0.241 |
+| 2022-10-08 | B2_epss_then_cvss | 8 | 0.065 | 0.845 (0.67-0.99) | 0.0169 | 0.312 | 0.625 (0.23-1.00) | 0.625 |
+| 2023-10-08 | B1_cvss_only | 4 | 0.026 | 0.8 (0.64-0.93) | 0.0007 | 0.002 | 0.094 (0.00-0.37) | 0.209 |
+| 2023-10-08 | B2b_poc_then_cvss | 4 | 0.026 | 0.839 (0.63-0.98) | 0.0018 | 0.0 | 0.271 (0.00-1.00) | 0.396 |
+| 2023-10-08 | B2_epss_then_cvss | 4 | 0.026 | 0.988 (0.98-1.00) | 0.0307 | 0.5 | 1.0 (1.00-1.00) | 1.0 |
 | 2024-10-08 | B1_cvss_only | 5 | 0.027 | 0.721 (0.54-0.94) | 0.0007 | 0.0 | 0.16 (0.00-0.40) | 0.363 |
-| 2024-10-08 | B2b_poc_then_cvss | 5 | 0.027 | 0.983 (0.97-0.99) | 0.0089 | 0.36 | 1.0 (1.00-1.00) | 1.0 |
-| 2025-10-08 | B1_cvss_only | 11 | 0.052 | 0.787 (0.67-0.91) | 0.003 | 0.167 | 0.299 (0.09-0.52) | 0.449 |
-| 2025-10-08 | B2b_poc_then_cvss | 11 | 0.052 | 0.952 (0.90-0.99) | 0.0175 | 0.321 | 0.818 (0.56-1.00) | 0.862 |
+| 2024-10-08 | B2b_poc_then_cvss | 5 | 0.027 | 0.914 (0.74-0.99) | 0.008 | 0.4 | 0.8 (0.36-1.00) | 0.8 |
+| 2024-10-08 | B2_epss_then_cvss | 5 | 0.027 | 0.976 (0.94-1.00) | 0.0693 | 0.6 | 0.6 (0.00-1.00) | 1.0 |
+| 2025-10-08 | B1_cvss_only | 11 | 0.052 | 0.787 (0.63-0.91) | 0.003 | 0.167 | 0.299 (0.09-0.53) | 0.449 |
+| 2025-10-08 | B2b_poc_then_cvss | 11 | 0.052 | 0.832 (0.67-0.94) | 0.0061 | 0.174 | 0.423 (0.12-0.71) | 0.55 |
+| 2025-10-08 | B2_epss_then_cvss | 11 | 0.052 | 0.8 (0.59-0.98) | 0.0776 | 0.273 | 0.545 (0.25-0.82) | 0.727 |
 <!-- /AUTO:L1 -->
 
 ## 3. Results — label L2 (`poc_12m`: first public PoC appears within 12 months)
@@ -40,10 +44,14 @@ Ties (for example many CVEs share CVSS 9.8) are handled by **expectation under r
 <!-- AUTO:L2 -->
 | Cohort | Baseline | Positives | Prevalence % | ROC AUC (95% CI) | Avg precision | Recall top 1% | Recall top 5% (95% CI) | Recall top 10% |
 |---|---|---|---|---|---|---|---|---|
-| 2022-10-08 | B1_cvss_only | 42 | 0.355 | 0.73 (0.65-0.81) | 0.0106 | 0.064 | 0.213 (0.13-0.30) | 0.399 |
-| 2023-10-08 | B1_cvss_only | 70 | 0.474 | 0.617 (0.56-0.68) | 0.0072 | 0.03 | 0.103 (0.05-0.15) | 0.194 |
-| 2024-10-08 | B1_cvss_only | 187 | 1.066 | 0.615 (0.58-0.65) | 0.0163 | 0.032 | 0.092 (0.06-0.12) | 0.167 |
-| 2025-10-08 | B1_cvss_only | 137 | 0.679 | 0.663 (0.62-0.71) | 0.0124 | 0.03 | 0.116 (0.07-0.16) | 0.251 |
+| 2022-10-08 | B1_cvss_only | 41 | 0.344 | 0.73 (0.65-0.80) | 0.0103 | 0.064 | 0.213 (0.13-0.30) | 0.399 |
+| 2022-10-08 | B2_epss_then_cvss | 41 | 0.344 | 0.692 (0.61-0.77) | 0.0092 | 0.049 | 0.146 (0.04-0.27) | 0.268 |
+| 2023-10-08 | B1_cvss_only | 66 | 0.444 | 0.63 (0.56-0.68) | 0.0066 | 0.017 | 0.092 (0.05-0.14) | 0.187 |
+| 2023-10-08 | B2_epss_then_cvss | 66 | 0.444 | 0.577 (0.50-0.64) | 0.0089 | 0.076 | 0.152 (0.07-0.24) | 0.182 |
+| 2024-10-08 | B1_cvss_only | 181 | 1.025 | 0.617 (0.58-0.65) | 0.0157 | 0.033 | 0.094 (0.06-0.13) | 0.169 |
+| 2024-10-08 | B2_epss_then_cvss | 181 | 1.025 | 0.584 (0.54-0.63) | 0.0154 | 0.022 | 0.099 (0.06-0.15) | 0.149 |
+| 2025-10-08 | B1_cvss_only | 138 | 0.68 | 0.661 (0.61-0.71) | 0.0122 | 0.029 | 0.112 (0.07-0.16) | 0.231 |
+| 2025-10-08 | B2_epss_then_cvss | 138 | 0.68 | 0.579 (0.52-0.64) | 0.0137 | 0.051 | 0.152 (0.10-0.22) | 0.261 |
 <!-- /AUTO:L2 -->
 
 ## 4. Project-level results (15 repositories, snapshot 2025-10-08) — descriptive only
@@ -52,7 +60,7 @@ Ties (for example many CVEs share CVSS 9.8) are handled by **expectation under r
 | Label | Candidate findings | Positives | CVSS-only AUC | Recall top 10% | Recall top 20% |
 |---|---|---|---|---|---|
 | kev_12m | 357 | 1 | 0.308 | 0.0 | 0.0 |
-| poc_12m | 318 | 12 | 0.65 | 0.167 | 0.42 |
+| poc_12m | 326 | 12 | 0.648 | 0.167 | 0.42 |
 <!-- /AUTO:PROJ -->
 
 <!-- AUTO:PROJNOTE -->
@@ -61,12 +69,12 @@ CVSS scores of the 12 PoC-positive findings: 3.7, 4.2, 4.2, 6.4, 6.4, 7.2, 7.5, 
 
 ## 5. What the baselines show (and what they do not)
 
-1. **CVSS is a weak ranker of future exploitation signals.** On the test cohort, CVSS-only captures about 12% of future-PoC vulnerabilities in its top 5% (random would capture 5%), with average precision about 1.8 times the prevalence. For KEV it is better (AUC 0.79, top-5% recall 0.30) but the interval is wide (0.09–0.52) because there are only 11 positives.
-2. **Exploit-evidence at T helps a lot for KEV.** The transparent "PoC first, then CVSS" rule reaches AUC 0.95 and top-5% recall 0.82 (interval 0.56–1.00) on the test cohort, and beat CVSS-only on top-5% recall in every cohort (AUC gains were smaller and intervals overlap in the 2022 cohort). This is a legitimate as-of-T signal (the PoC existed before the KEV listing; no leakage — see leakage checks C5, C10), and it is the bar a learned model must clear in Activity 5.
-3. **Statistical power is low for L1.** Positives are 4–11 per cohort. Intervals are wide, cohorts disagree on the exact numbers, and no claim should rest on L1 alone. L2 (42–187 positives) has tighter intervals.
+1. **CVSS is a weak ranker of future exploitation signals.** On the test cohort, CVSS-only captures about 11% of future-PoC vulnerabilities in its top 5% (random would capture 5%), with average precision about 1.8 times the prevalence. For KEV it is better (AUC 0.79, top-5% recall 0.30) but the interval is wide (0.09–0.53) because there are only 11 positives.
+2. **Exploit evidence has mixed results across cohorts.** The transparent "PoC first, then CVSS" rule reaches AUC 0.83 and top-5% recall 0.42 (interval 0.12–0.71) on the test cohort, but it does not beat CVSS-only on top-5% recall in every cohort. This is an as-of-T signal (see leakage checks C5, C10), not evidence of a universal gain.
+3. **Statistical power is low for L1.** Positives are 4–11 per cohort. Intervals are wide, cohorts disagree on the exact numbers, and no claim should rest on L1 alone. L2 (41–181 positives) has more observations, but remains a noisy proxy.
 4. **Project-level numbers are anecdotes, not evidence.** With 1 KEV and 12 PoC positives, only the direction is informative: CVSS-only ranking puts most PoC-positive findings outside its top 10%.
 <!-- AUTO:H1 -->
-5. **H1 is only partially tested.** The exploit-evidence part (PoC) supports it for KEV; the EPSS part is pending the EPSS download.
+5. **H1 — EPSS results are mixed.** On the test cohort, KEV top-5% recall is 0.545 with EPSS vs 0.299 for CVSS-only; PoC top-5% recall is 0.152 vs 0.112. A paired bootstrap comparison of B2 against B1 was not run, so these differences do not confirm H1.
 <!-- /AUTO:H1 -->
 
 ## 6. Limitations specific to the baselines

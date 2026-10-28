@@ -19,11 +19,19 @@ FORBIDDEN = {"kev_date", "poc_first_date", "kev_12m", "poc_12m", "cand_kev", "ca
 chk("C9 the declared feature list contains no label-derived or future-dated column", not (set(FEATURES) & FORBIDDEN), "FEATURES saved to config/features.json")
 json.dump({"population_features": FEATURES, "forbidden": sorted(FORBIDDEN)}, open(f"{ROOT}/config/features.json", "w"), indent=1)
 import random, glob
-random.seed(1); smp = pop[pop.poc_count_at_T > 0].sample(200, random_state=1); bad = 0
-for r in smp.itertuples():
-    f = glob.glob(f"{ROOT}/data/raw/poc/20*/{r.cve}.json")[0]
-    n = sum(pd.Timestamp(x["created_at"][:10]) <= r.snapshot for x in json.load(open(f)) if x.get("created_at")); bad += int(n != r.poc_count_at_T)
-chk("C10 poc_count_at_T independently recomputed from raw PoC files (200 random rows)", bad == 0, f"{bad} mismatches")
+poc_pos = pop[pop.poc_count_at_T > 0]
+if len(poc_pos) == 0:
+    chk("C10 poc_count_at_T independently recomputed from raw PoC files (200 random rows)", False,
+        "no rows with poc_count_at_T > 0 — run scripts/fetch_raw_data.sh (PoC index) then src/05b_build_datasets.py")
+else:
+    random.seed(1); smp = poc_pos.sample(min(200, len(poc_pos)), random_state=1); bad = 0
+    for r in smp.itertuples():
+        hits = glob.glob(f"{ROOT}/data/raw/poc/20*/{r.cve}.json")
+        if not hits:
+            bad += 1; continue
+        n = sum(pd.Timestamp(x["created_at"][:10]) <= r.snapshot for x in json.load(open(hits[0])) if x.get("created_at"))
+        bad += int(n != r.poc_count_at_T)
+    chk("C10 poc_count_at_T independently recomputed from raw PoC files (200 random rows)", bad == 0, f"{bad} mismatches")
 # project-level
 trip = prj.dropna(subset=["cve"]).groupby(["name", "version", "cve"]).project.nunique()
 shared = int((trip > 1).sum()); chk("C11 (informational) package-version-CVE triples shared by >1 project -> split by PROJECT not by row", True, f"{shared} of {len(trip)} triples appear in more than one project")

@@ -1,0 +1,86 @@
+{
+ "weights": {
+  "exploit": 0.6,
+  "exposure": 0.25,
+  "health": 0.15
+ },
+ "tier_cuts": [
+  0.7,
+  0.5,
+  0.3
+ ],
+ "actions": [
+  "upgrade",
+  "replace",
+  "isolate",
+  "monitor",
+  "accept"
+ ],
+ "population_fusion": {
+  "kev_12m": {
+   "best_model": "logreg",
+   "combination": "0.25",
+   "validation_auc_and_top5_recall": {
+    "gate": [
+     0.9872,
+     1.0
+    ],
+    "0.5": [
+     0.9867,
+     1.0
+    ],
+    "0.25": [
+     0.9878,
+     1.0
+    ],
+    "0.75": [
+     0.9841,
+     0.8
+    ],
+    "0.0": [
+     0.984,
+     1.0
+    ],
+    "1.0": [
+     0.978,
+     0.8
+    ]
+   }
+  },
+  "poc_12m": {
+   "best_model": "forest",
+   "combination": "gate",
+   "validation_auc_and_top5_recall": {
+    "gate": [
+     0.7462,
+     0.227
+    ],
+    "0.5": [
+     0.7111,
+     0.138
+    ],
+    "0.25": [
+     0.6698,
+     0.127
+    ],
+    "0.75": [
+     0.736,
+     0.149
+    ],
+    "0.0": [
+     0.6282,
+     0.105
+    ],
+    "1.0": [
+     0.7462,
+     0.227
+    ]
+   }
+  }
+ },
+ "snapshot": "2025-10-08",
+ "rules": {
+  "tier": "P1 if risk>=0.70, P2 if >=0.50, P3 if >=0.30 else P4",
+  "decision": "P4: monitor if direct or abandoned else accept | P1-P3: upgrade if a fix exists; replace if abandoned; isolate if P1/P2; else monitor"
+ }
+}

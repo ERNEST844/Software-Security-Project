@@ -8,3 +8,5 @@ requests
 cvss
 semantic-version
 packaging
+matplotlib
+joblib

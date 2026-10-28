@@ -1,0 +1,37 @@
+label,perturbation,scorer,roc_auc,recall_top5pct,auc_change,recall_change
+kev_12m,none (clean test),B1 CVSS only,0.787,0.299,0.0,0.0
+kev_12m,none (clean test),Rule score,0.892,0.727,0.0,0.0
+kev_12m,none (clean test),Model,0.916,0.636,0.0,0.0
+kev_12m,none (clean test),Hybrid (selected),0.905,0.636,0.0,0.0
+kev_12m,"CVSS noise (normal, sd 1.0)",B1 CVSS only,0.833,0.218,0.045,-0.081
+kev_12m,"CVSS noise (normal, sd 1.0)",Rule score,0.892,0.727,-0.0,0.0
+kev_12m,"CVSS noise (normal, sd 1.0)",Model,0.919,0.636,0.002,0.0
+kev_12m,"CVSS noise (normal, sd 1.0)",Hybrid (selected),0.905,0.636,0.001,0.0
+kev_12m,20% of CVSS scores missing,B1 CVSS only,0.722,0.335,-0.066,0.036
+kev_12m,20% of CVSS scores missing,Rule score,0.896,0.545,0.004,-0.182
+kev_12m,20% of CVSS scores missing,Model,0.922,0.545,0.006,-0.091
+kev_12m,20% of CVSS scores missing,Hybrid (selected),0.912,0.545,0.007,-0.091
+kev_12m,BYPASS: exploited CVEs get CVSS lowered by 3,B1 CVSS only,0.354,0.0,-0.433,-0.299
+kev_12m,BYPASS: exploited CVEs get CVSS lowered by 3,Rule score,0.785,0.364,-0.107,-0.364
+kev_12m,BYPASS: exploited CVEs get CVSS lowered by 3,Model,0.884,0.545,-0.033,-0.091
+kev_12m,BYPASS: exploited CVEs get CVSS lowered by 3,Hybrid (selected),0.813,0.636,-0.091,0.0
+kev_12m,BYPASS: exploit code hidden for exploited CVEs,B1 CVSS only,0.787,0.299,0.0,0.0
+kev_12m,BYPASS: exploit code hidden for exploited CVEs,Rule score,0.836,0.545,-0.056,-0.182
+kev_12m,BYPASS: exploit code hidden for exploited CVEs,Model,0.877,0.545,-0.039,-0.091
+kev_12m,BYPASS: exploit code hidden for exploited CVEs,Hybrid (selected),0.854,0.545,-0.051,-0.091
+poc_12m,none (clean test),B1 CVSS only,0.661,0.112,0.0,0.0
+poc_12m,none (clean test),Rule score,0.676,0.138,0.0,0.0
+poc_12m,none (clean test),Model,0.657,0.196,0.0,0.0
+poc_12m,none (clean test),Hybrid (selected),0.657,0.196,0.0,0.0
+poc_12m,"CVSS noise (normal, sd 1.0)",B1 CVSS only,0.645,0.111,-0.016,-0.002
+poc_12m,"CVSS noise (normal, sd 1.0)",Rule score,0.667,0.152,-0.009,0.014
+poc_12m,"CVSS noise (normal, sd 1.0)",Model,0.65,0.188,-0.006,-0.007
+poc_12m,"CVSS noise (normal, sd 1.0)",Hybrid (selected),0.65,0.188,-0.006,-0.007
+poc_12m,20% of CVSS scores missing,B1 CVSS only,0.639,0.115,-0.022,0.003
+poc_12m,20% of CVSS scores missing,Rule score,0.664,0.145,-0.012,0.007
+poc_12m,20% of CVSS scores missing,Model,0.658,0.196,0.002,0.0
+poc_12m,20% of CVSS scores missing,Hybrid (selected),0.658,0.196,0.002,0.0
+poc_12m,BYPASS: exploited CVEs get CVSS lowered by 3,B1 CVSS only,0.273,0.0,-0.389,-0.112
+poc_12m,BYPASS: exploited CVEs get CVSS lowered by 3,Rule score,0.35,0.094,-0.325,-0.043
+poc_12m,BYPASS: exploited CVEs get CVSS lowered by 3,Model,0.655,0.138,-0.001,-0.058
+poc_12m,BYPASS: exploited CVEs get CVSS lowered by 3,Hybrid (selected),0.655,0.138,-0.001,-0.058

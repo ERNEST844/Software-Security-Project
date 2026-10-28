@@ -2,7 +2,7 @@
 
 **Course:** UTAMU S26.CSC 7203 Security of Software (2026/2027)
 **Title:** Prioritising vulnerable third-party dependencies: from SBOMs to a risk-ranked remediation list
-**Status:** v1.0, frozen 2026-10-13 before any model is trained. Changes are recorded in the Amendments Log (Section 10).
+**Status:** v1.1. The original protocol was frozen 2026-10-13 before any model was trained; post-run deviations are recorded in the Amendments Log (Section 10).
 **Companion files:** `01_literature_matrix.csv`, `../config/study.yaml`, `../config/features.json`
 
 ---
@@ -31,7 +31,7 @@ H1–H4 are tested in Activities 5–7. Negative results will be reported as suc
 
 ## 3. Scope
 
-**In scope:** known-vulnerable and poorly-maintained third-party dependencies in npm and PyPI lockfiles of application repositories (15 public repositories + one student-owned project); vulnerability-level analysis across eight package ecosystems.
+**In scope:** known-vulnerable and poorly-maintained third-party dependencies in npm and PyPI lockfiles of application repositories (15 public repositories); vulnerability-level analysis across eight package ecosystems.
 
 **Out of scope:** detection of malicious packages (the handbook title mentions them). Studying them requires downloading suspect packages, which the handbook permits only in an isolated approved environment; none is available. The taxonomy of L13 is used to state this boundary explicitly. Also out of scope: code-level reachability (L14–L16) and first-party code vulnerabilities.
 
@@ -44,9 +44,9 @@ H1–H4 are tested in Activities 5–7. Negative results will be reported as suc
 
 ## 5. Ethics, permissions and safety
 
-- Only **public** repositories and the student's **own** project are analysed.
-- Only dependency lockfiles/manifests are read (no source code is analysed or redistributed). For the student-owned project, only `requirements.txt` was read; `.env`, the database and source files were not accessed.
-- No package is installed or executed in the study. (The student-owned project's requirements were resolved with a pip dry-run, which installs nothing.)
+- Only **public** repositories are analysed.
+- Only dependency lockfiles/manifests are read (no source code is analysed or redistributed).
+- No package is installed or executed in the study.
 - No exploit code is downloaded. The PoC index is used only for repository creation **dates** per CVE.
 - No live systems are scanned. All data sources are public.
 
@@ -58,7 +58,7 @@ H1–H4 are tested in Activities 5–7. Negative results will be reported as suc
 | CISA KEV (via GitHub mirror) | label L1 | catalogVersion 2026.10.08, 1,739 entries | US-government publication; confirm terms at cisa.gov |
 | nomi-sec/PoC-in-GitHub | label L2, PoC feature | commit `7bf2d879…`, 2026-10-13 | Creative Commons (file header) |
 | npm registry, PyPI JSON API | release dates for package-health features | fetched 2026-10-13 | public API |
-| FIRST EPSS | feature + Baseline 2 | **not yet retrieved** (host unreachable from the build environment); `src/fetch_epss.py` | free per FIRST |
+| FIRST EPSS | feature + Baseline 2 | four cohort snapshots retrieved 2026-10-27; `src/fetch_epss.py` | free per FIRST |
 | 15 public repositories | lockfiles at the 2025-10-08 snapshot commit | commit hashes in `data/processed/snapshot_file_manifest.json` | see `02_data_provenance_and_dictionary.md` |
 
 ### 6.1 Time-aware design
@@ -70,7 +70,7 @@ For a snapshot date **T**, every feature uses only information that existed at T
 | Label | Definition | Positives per cohort (2022 → 2025) | Prevalence |
 |---|---|---|---|
 | **L1 `kev_12m`** (strong) | CVE first added to CISA KEV in (T, T+12m]; candidates exclude CVEs already in KEV at T | 8, 4, 5, 11 | 0.03–0.07 % |
-| **L2 `poc_12m`** (dense) | First public GitHub PoC repository created in (T, T+12m]; candidates exclude CVEs that already had one at T | 42, 70, 187, 137 | 0.35–1.07 % |
+| **L2 `poc_12m`** (dense) | First public GitHub PoC repository created in (T, T+12m]; candidates exclude CVEs that already had one at T | 42, 70, 187, 138 | 0.35–1.07 % |
 
 **Finding that shaped the design.** Only 135 of the 1,739 KEV entries map to a library advisory (npm 14, PyPI 20, Maven 54). A forward-looking KEV label therefore yields only 4–11 positives per cohort among 12,000–21,000 candidates — far too few to support statistical claims alone. L1 is retained because it is the strongest evidence of real exploitation, but **L2 carries the statistical weight**; L1 is reported with wide confidence intervals and never as the sole basis for a conclusion. PoC existence is a noisy proxy (some repositories are fake, scanners or duplicates); this is a stated limitation.
 
@@ -80,10 +80,10 @@ KEV membership cannot be both the target and an input. Therefore Baseline 2 is *
 
 ## 7. Evaluation plan
 
-- **Unit of analysis:** CVE (population dataset); project × component × CVE (project dataset). Splits by **time** for the population and by **project** for the project dataset (45 of 307 package-version-CVE triples appear in more than one project, so row-level splitting would leak).
-- **Metrics:** ROC AUC; average precision; recall in the top 1% / 5% / 10% with ties broken by expectation (never by input order); NDCG (planned, Activity 7); calibration (reliability curve, Brier score) for probabilistic models; bootstrap 95% intervals (500 resamples over CVEs).
+- **Unit of analysis:** CVE (population dataset); project × component × CVE (project dataset). The population split is by time. A project-held-out evaluation was planned for project findings, because 45 of 307 package-version-CVE triples appear in more than one project; the current project ablation is descriptive across the full project set and must not be interpreted as a held-out project result.
+- **Metrics:** ROC AUC; average precision; recall in the top 1% / 5% / 10% with ties broken by expectation (never by input order); calibration (reliability curve, Brier score) for probabilistic models; bootstrap 95% intervals (500 resamples over CVEs). NDCG was planned but not calculated.
 - **Baselines (Activity 4):** B1 CVSS-only; B2 CVSS+EPSS rule (when EPSS available); B2b "public PoC at T, then CVSS" (KEV task). Random expectation (AUC 0.5; AP = prevalence) is the floor.
-- **Main models (Activity 5):** Logistic Regression, Random Forest, gradient boosting, plus a graph-feature variant; **hybrid layer (Activity 6):** rules + learned score with an action engine.
+- **Main models (Activity 5):** Logistic Regression, Random Forest, and gradient boosting; **hybrid layer (Activity 6):** rules + learned score with an action engine. A learned graph-feature variant was planned but not implemented; graph exposure and package health are evaluated in the project-level risk ablation.
 - **Ablations:** with/without EPSS; with/without graph and health features; with/without PoC feature.
 - **Leakage checks:** 13 automated checks (`src/06_leakage_checks.py`), all passing, and a list of residual untestable risks in `results/leakage_checks.json`.
 - **Matcher validation:** the advisory matcher was validated against npm's own audit service on 1,279 package-version pairs: recall 100%, precision 99.5%. Remaining differences are explained by advisories newer than npm's service and by prerelease-version semantics (`results/matcher_validation_npm.json`).
@@ -95,9 +95,8 @@ KEV membership cannot be both the target and an input. Therefore Baseline 2 is *
 3. Advisory metadata (CVSS vector, CWE) is the 2026-10-13 version, not the version visible at T.
 4. "Direct" dependencies are approximated as components with no incoming edge in the lockfile graph; monorepo workspaces blur this.
 5. Repository sample is a convenience sample of well-known application repositories with committed lockfiles; results may not generalise to repositories without lockfiles. Python quota is 7, not 8, because the candidate list was exhausted.
-6. Project-level labelled positives are very few (1 KEV, 12 PoC among 357/318 candidate findings), so project-level results are descriptive.
-7. The student-owned project has no history at T; it is analysed only in a current-state scan.
-8. EPSS model versions differ across cohort dates.
+6. Project-level labelled positives are very few (1 KEV, 12 PoC among 357 KEV / 326 PoC candidate findings), so project-level results are descriptive.
+7. EPSS model versions differ across cohort dates.
 
 ## 9. Deliverables and mapping to the marking scheme
 
@@ -108,6 +107,13 @@ KEV membership cannot be both the target and an input. Therefore Baseline 2 is *
 | 3 Preprocessing / features | pipeline, EDA and quality report, leakage checks | `src/`, `docs/03_*`, `results/` |
 | 4 Baseline | scripts + results table + report | `src/07_baselines.py`, `docs/04_*` |
 
+| Activity | Deliverable | Where |
+|---|---|---|
+| 5 Models | time-aware rankers and held-out metrics | `src/10_models.py`, `results/model_population_results.csv`, `docs/05_activity_5_to_8_results.md` |
+| 6 Hybrid engine | validation-selected fusion and project remediation plan | `src/11_hybrid_engine.py`, `results/remediation_plan.csv` |
+| 7 Evaluation | paired comparisons, robustness, calibration, figures | `src/12_evaluation.py`, `results/eval_*.csv`, `results/figures/` |
+| 8 Prototype | standalone remediation dashboard | `src/13_dashboard.py`, `results/dashboard.html` |
+
 ## 10. Amendments log
 
 | Date | Change | Reason | Outcome data seen? |
@@ -115,3 +121,4 @@ KEV membership cannot be both the target and an input. Therefore Baseline 2 is *
 | 2026-10-13 | Repository criterion changed from "package-lock.json only" to "root-level lockfile of a supported type (package-lock.json, yarn.lock, pnpm-lock.yaml, uv.lock, poetry.lock)". "OSI-approved licence" replaced by "public repository, lockfile-only analysis". | Discovery showed most candidates use yarn/pnpm and several have non-OSI licences. | **No** — only lockfile availability had been inspected. |
 | 2026-10-13 | Single KEV label replaced by two labels (L1 KEV, L2 PoC). | KEV positives per cohort are 4–11, too few. | Label counts were inspected (not model results). |
 | 2026-10-13 | Baseline 2 changed from CVSS+EPSS+KEV to CVSS+EPSS (+PoC variant). | KEV cannot be both target and feature. | No. |
+| 2026-10-27 | Activities 5–8 executed after restoring the pinned PoC index and rebuilding all cohorts with the available EPSS snapshots. The protocol is clarified to distinguish completed analyses from planned work: the graph-feature ranker, project-held-out evaluation, NDCG, and SHAP stability analysis were not completed. | Record implementation scope and evaluation limitations accurately after the held-out results were generated. | **Yes** — the 2025 test cohort had been scored. |

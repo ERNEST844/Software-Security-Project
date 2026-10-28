@@ -1,0 +1,61 @@
+label,model,feature,value,meaning
+kev_12m,logreg,num__epss_at_T,0.33182,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__epss_pct_at_T,0.1431,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__n_ecosystems,0.13036,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__eco_Maven,0.09786,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__poc_count_at_T,0.0952,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__sev_rank,0.08715,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__cvss_base,0.08304,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__eco_Go,-0.05432,standardised coefficient (+ raises risk)
+kev_12m,logreg,cat__C_H,0.05375,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__missingindicator_cvss_base,-0.0537,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__has_fix,0.04692,standardised coefficient (+ raises risk)
+kev_12m,logreg,cat__UI_N,0.0412,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__advisory_age_days,-0.03828,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__eco_Packagist,0.03462,standardised coefficient (+ raises risk)
+kev_12m,logreg,num__eco_npm,-0.03386,standardised coefficient (+ raises risk)
+kev_12m,forest,num__epss_pct_at_T,0.29882,importance
+kev_12m,forest,num__epss_at_T,0.23513,importance
+kev_12m,forest,num__poc_count_at_T,0.08805,importance
+kev_12m,forest,num__advisory_age_days,0.0818,importance
+kev_12m,forest,num__cvss_base,0.03102,importance
+kev_12m,forest,num__sev_rank,0.02041,importance
+kev_12m,forest,num__n_affected_packages,0.02016,importance
+kev_12m,forest,num__eco_Maven,0.01707,importance
+kev_12m,forest,cat__cwe_primary_CWE-94,0.01508,importance
+kev_12m,forest,cat__cwe_primary_CWE-306,0.01464,importance
+kev_12m,forest,cat__SC_C,0.01413,importance
+kev_12m,forest,num__n_ecosystems,0.0124,importance
+kev_12m,forest,cat__cwe_primary_CWE-200,0.01063,importance
+kev_12m,forest,cat__C_H,0.00871,importance
+kev_12m,forest,cat__UI_N,0.00838,importance
+poc_12m,logreg,cat__cwe_primary_CWE-22,1.29263,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-94,0.87244,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-78,0.75518,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-352,-0.56283,standardised coefficient (+ raises risk)
+poc_12m,logreg,num__eco_Maven,0.49653,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-918,0.45504,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__SC_NA,-0.35936,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__PR_L,-0.2993,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_NA,-0.29886,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__I_H,0.27258,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_infrequent_sklearn,0.27065,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-287,-0.26896,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-74,0.26522,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__SC_C,0.26483,standardised coefficient (+ raises risk)
+poc_12m,logreg,cat__cwe_primary_CWE-862,-0.2637,standardised coefficient (+ raises risk)
+poc_12m,forest,num__advisory_age_days,0.1573,importance
+poc_12m,forest,num__epss_at_T,0.12451,importance
+poc_12m,forest,num__epss_pct_at_T,0.12055,importance
+poc_12m,forest,num__eco_Maven,0.08406,importance
+poc_12m,forest,cat__cwe_primary_CWE-22,0.08306,importance
+poc_12m,forest,num__cvss_base,0.05307,importance
+poc_12m,forest,cat__cwe_primary_CWE-94,0.03541,importance
+poc_12m,forest,num__sev_rank,0.02789,importance
+poc_12m,forest,cat__I_H,0.0184,importance
+poc_12m,forest,num__n_affected_packages,0.01607,importance
+poc_12m,forest,cat__cwe_primary_CWE-78,0.01535,importance
+poc_12m,forest,cat__PR_N,0.01402,importance
+poc_12m,forest,num__eco_npm,0.01244,importance
+poc_12m,forest,num__has_fix,0.01205,importance
+poc_12m,forest,cat__UI_R,0.01171,importance

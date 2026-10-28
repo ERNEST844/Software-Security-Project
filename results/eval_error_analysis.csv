@@ -1,0 +1,67 @@
+cve,cvss,poc_count_at_T,model_p,rank,of,y,label,type
+CVE-2025-49113,9.9,18,0.2990332840576972,26.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2021-23758,9.8,1,0.0062611266589854,74.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2025-24893,9.8,0,0.0096912436585726,275.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2023-22894,7.5,2,0.0007944541255906,499.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2025-32432,10.0,0,0.0051491368434151,518.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2016-3081,8.1,0,0.0074885108060697,529.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2021-43798,7.5,0,0.0049257252723556,579.5,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2025-54313,7.5,2,0.0003014634614867,1571.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2025-54068,9.8,0,0.0003338606134776,3048.5,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2025-54236,9.1,0,0.0003194780773888,3691.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2025-31125,5.3,0,0.0002856793349192,11536.0,21253,1,kev_12m,exploited CVE and where it was ranked
+CVE-2023-41892,10.0,6,0.0330381094925343,1.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2024-31982,10.0,3,0.0197444883305357,2.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2023-0297,9.8,6,0.028737739922204,3.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2022-24637,9.8,6,0.0302683753205088,4.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2019-18818,9.8,5,0.0189119009198127,5.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2023-25157,9.8,8,0.0544362542621353,6.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2017-12611,9.8,3,0.0159173298401073,7.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2019-0230,9.8,4,0.0215675144950894,8.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2017-5645,9.8,2,0.0134581229965,9.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2024-9264,9.9,10,0.0567479094382595,10.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2024-32651,10.0,2,0.0116088726072642,11.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2023-50164,9.8,14,0.1857795611363046,12.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2023-1177,9.8,6,0.0279023662256203,13.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2020-27955,9.8,17,0.2224303500624307,14.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2024-45216,9.8,1,0.0117729371813176,15.0,21253,0,kev_12m,"false positive: ranked high, not exploited"
+CVE-2020-6950,7.5,0,0.0448065174753995,20.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-41243,10.0,0,0.0389734379448412,72.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-59528,10.0,0,0.0369720869444737,109.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-58434,9.8,0,0.0359867641290167,122.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2024-43202,9.8,0,0.0355960445557422,137.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2024-43400,9.0,0,0.0343833853026837,164.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-54123,9.8,0,0.0340189657294688,172.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2019-18394,9.8,0,0.0336889369747926,178.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2019-10070,6.1,0,0.029124344285572,379.5,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2022-23221,9.8,0,0.0277977389874874,452.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2020-13927,9.8,0,0.0276949170194919,459.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-54795,8.7,0,0.0276842199464826,461.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-59536,8.7,0,0.0275457985655328,464.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2010-3863,,0,0.0258355386174118,585.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2020-11981,9.8,0,0.0250351608701566,665.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-7338,7.5,0,0.0250289021450242,666.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2024-2044,9.9,0,0.0248995057051737,677.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-54068,9.8,0,0.0246438169636408,699.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-23061,9.0,0,0.0242445740332589,725.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-54782,9.4,0,0.0236202164566307,775.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2023-47248,9.8,0,0.0236179154616321,776.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-6514,9.6,0,0.0232761265872235,819.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-41242,5.9,0,0.022268831069076,913.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2023-49785,9.1,0,0.0222501761238667,916.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2025-27407,9.0,0,0.0220102087001565,932.0,20299,1,poc_12m,exploited CVE and where it was ranked
+CVE-2018-1000079,5.5,0,0.0574288259539245,1.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2018-8008,5.5,0,0.0553697400350488,2.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2022-42123,7.5,0,0.0514165304537572,3.5,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2022-42125,7.5,0,0.0514165304537572,3.5,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2018-20227,7.5,0,0.0501936873564868,5.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2018-1316,7.5,0,0.0500970689989989,6.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2018-1261,4.7,0,0.0493519982484783,7.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2017-3163,7.5,0,0.0490179240749306,8.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2022-37866,7.5,0,0.048945446195455,9.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2022-42889,9.8,0,0.0477698142957268,10.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2019-3799,6.5,0,0.0472825508235028,11.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2018-14667,9.8,0,0.0470841223685678,12.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2018-17785,7.5,0,0.047082029944233,13.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2016-9878,7.5,0,0.04658914185562,14.0,20299,0,poc_12m,"false positive: ranked high, not exploited"
+CVE-2024-1132,8.1,0,0.0464791841028583,15.0,20299,0,poc_12m,"false positive: ranked high, not exploited"

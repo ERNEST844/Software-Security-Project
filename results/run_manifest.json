@@ -1,0 +1,52 @@
+{
+ "finished_utc": "2026-10-27T13:07:16+00:00",
+ "mode": "in-place",
+ "success": true,
+ "python": "3.13.7",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "project_git_commit": "602ce6595043879166fd6f8d8b26c4a17714e701",
+ "steps": [
+  {
+   "step": "09",
+   "label": "sync report tables and check quoted numbers",
+   "returncode": 0,
+   "seconds": 0.2
+  },
+  {
+   "step": "10",
+   "label": "Activity 5: learned rankers",
+   "returncode": 0,
+   "seconds": 477.8
+  },
+  {
+   "step": "11",
+   "label": "Activity 6: hybrid engine + remediation plan",
+   "returncode": 0,
+   "seconds": 207.0
+  },
+  {
+   "step": "12",
+   "label": "Activity 7: evaluation + figures",
+   "returncode": 0,
+   "seconds": 1217.3
+  },
+  {
+   "step": "13",
+   "label": "Activity 8: interactive standalone dashboard",
+   "returncode": 0,
+   "seconds": 3.0
+  }
+ ],
+ "key_output_sha256": {
+  "data/processed/population_cohorts.csv": "84cea17aa2b9a601885a354bf7f525353581474da3cd6703f4f5037081155b1a",
+  "data/processed/project_findings_t0.csv": "b889d75482025e2db05fb94f56df7cb6cbd5a119ec75dafdfe0bcbf8b442f73c",
+  "results/baseline_population_results.csv": "df031025f5d81384821886b301606429271a8d729747c516a806bfb5e55a80c2",
+  "results/baseline_project_results.csv": "45418b2917d29d0c918fe9b34c2efd5fccbef7569319079209b803220c0d2f71",
+  "results/leakage_checks.json": "69be5096f328f399a4b8d86d19ba64f7b7e20c55c9a224d502fadeb97247b4a7",
+  "results/model_population_results.csv": "68de1c9179c8571d21ab2928df2876ffe03f068f4dc68d250e149618da679a3e",
+  "results/hybrid_ablation.csv": "a3554c9ae101fa77ee06cfed0f047a981798b7f319deae32e07c26bbc81c7fe7",
+  "results/remediation_plan.csv": "393664b946cb1c81efdf3841b1f13294475ef24fc3d7257026051baf8c6bfc68",
+  "results/evaluation_summary.json": "33286e2b380f99ed8a69eb2e42302d3042939f3758d26fcfe7cd9c1706dbae2a",
+  "results/dashboard.html": "8c8b10fb4e3b14becc158d34d39690a9423ccb48c06f6b8500848c0b90fed23f"
+ }
+}

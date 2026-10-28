@@ -1,0 +1,34 @@
+{
+ "2022-10-08": {
+  "bytes": 747596,
+  "model_version": "v2022.01.01",
+  "rows": 186002,
+  "score_date": "2022-10-08",
+  "sha256": "a31e4774a956d7f103c63317a1276242d929ea8d46b1dea493a2c6b7f40af38a",
+  "source": "https://epss.empiricalsecurity.com/epss_scores-2022-10-08.csv.gz"
+ },
+ "2023-10-08": {
+  "bytes": 1358421,
+  "model_version": "v2023.03.01",
+  "rows": 214377,
+  "score_date": "2023-10-08",
+  "sha256": "c844ad25e7f6f7c69df483cda954ed4ef13d5cbb02c26300313becd37afe6ffe",
+  "source": "https://epss.empiricalsecurity.com/epss_scores-2023-10-08.csv.gz"
+ },
+ "2024-10-08": {
+  "bytes": 1578985,
+  "model_version": "v2023.03.01",
+  "rows": 261301,
+  "score_date": "2024-10-08",
+  "sha256": "4d4289e82572afdac558a99354035486f5ba05703aebb4ad44630a2f0341f691",
+  "source": "https://epss.empiricalsecurity.com/epss_scores-2024-10-08.csv.gz"
+ },
+ "2025-10-08": {
+  "bytes": 1984598,
+  "model_version": "v2025.03.14",
+  "rows": 297266,
+  "score_date": "2025-10-08",
+  "sha256": "67aee1472bf8a6d26924a295fbee67b5f3eddd47e1269e981983c2c9b9c73c25",
+  "source": "https://epss.empiricalsecurity.com/epss_scores-2025-10-08.csv.gz"
+ }
+}
